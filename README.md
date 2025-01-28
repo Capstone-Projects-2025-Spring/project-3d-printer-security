@@ -22,7 +22,16 @@ Verion 1.0.0
 
 ## Project Abstract
 
-This document proposes a novel application of a text message (SMS or Email) read-out and hands-free call interacted between an Android Smartphone and an infotainment platform (headunit) in a car environment. When a phone receives an SMS or Email, the text message is transferred from the phone to the headunit through a Bluetooth connection. On the headunit, user can control which and when the received SMS or E-mail to be read out through the in-vehicle audio system. The user may press one button on the headunit to activate the hands-free feature to call back the SMS sender.
+3D Printer G-CODE Validation and Security Application
+
+The increasing accessibility of 3D printing has revolutionized manufacturing and prototyping or re-producing a part in a remote location. However, with the widespread us of printing 3D parts, there is a growing risk of maliciously altered or error-prone G-CODE files that could damage other equipment using the printed parts, or result in injury or fire. This project aims to develop an application to scan G-CODE files for potential threats or errors, ensuring safer and more reliable 3D printing.
+The application will analyze G-CODE files to identify issues such as out-of-bound commands, excessive temperature settings, user error, or malicious codes. It will also create a check list for the user to properly print the part with success check for bad G-CODE and suggest corrective measures. The application will flag the G-CODE if the files are un-safe, problematic, or malicious. The application will provide a summary to the user.
+The project’s goals include:
+1.	Enhancing 3D printer safety by mitigating the risks of hardware damage or accidents.
+2.	Streamlining the printing process by catching common errors before execution.
+3.	Providing a user-friendly interface for reviewing identified issues with actionable suggestions for resolution.
+This application has the potential to be a vital tool for 3D printing enthusiasts and professionals, ensuring higher print reliability, reduced downtime, and safer operation.
+
 
 ## High Level Requirement
 
