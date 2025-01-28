@@ -39,7 +39,7 @@ The app will be an executable program with a graphical UI. It will be launched a
 
 ## Conceptual Design
 
-The application will be written in Java or Python and it will be portable and executable for windows, linux, mac etc. 
+The application will be written in Java or Python and it will be portable and executable for windows, linux, mac etc. The design will begin with scanning the for temperature range and temperature of hot plate to turn off after printing. The other variables will check for printer model and x,y,z are within limits. We can add more features such as a checklist for the user to make sure they have followed the correct steps to complete a successful print.
 
 ## Background
 
