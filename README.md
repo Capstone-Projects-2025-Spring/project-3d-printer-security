@@ -35,11 +35,11 @@ This application has the potential to be a vital tool for 3D printing enthusiast
 
 ## High Level Requirement
 
-Describe the requirements – i.e., what the product does and how it does it from a user point of view – at a high level.
+The app will be an executable program with a graphical UI. It will be launched after CURA has sliced and saved the file to the USB drive or the desired folder. The app will scan that newly created G-CODE and alert the user to halt or continue based on the scan.
 
 ## Conceptual Design
 
-Describe the initial design concept: Hardware/software architecture, programming language, operating system, etc.
+The application will be written in Java or Python and it will be portable and executable for windows, linux, mac etc. 
 
 ## Background
 
