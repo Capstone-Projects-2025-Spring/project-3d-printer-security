@@ -45,11 +45,22 @@ The application will be written in Java or Python and it will be portable and ex
 
 The background will contain a more detailed description of the product and a comparison to existing similar projects/products. A literature search should be conducted and the results listed. Proper citation of sources is required. If there are similar open-source products, you should state whether existing source will be used and to what extent. If there are similar closed-source/proprietary products, you should state how the proposed product will be similar and different.
 
+I have found the following document that can shed light on types of work done for code protection.
+
+https://asmedigitalcollection.asme.org/computingengineering/article-abstract/21/4/041007/1089710/A-Blockchain-Based-G-Code-Protection-Approach-for?redirectedFrom=fulltext
 
 
 ## Required Resources
 
 Discuss what you need to develop this project. This includes background information you will need to acquire, hardware resources, and software resources. If these are not part of the standard Computer Science Department lab resources, these must be identified early and discussed with the instructor.
+
+I am proposing the following:
+- 3d Printer
+- Dedicated Temple provided computer
+- Remote vpn access to computer for working remotely to test code.
+- Camera pointed at the 3d Printer for remote testing.
+
+We can discuss these add / remove above per Professor Applebaum.
 
 ## Collaborators
 
@@ -69,41 +80,41 @@ Discuss what you need to develop this project. This includes background informat
             <br />
             <sub><b>Null</b></sub>
         </a>
-    </td></tr><td align="center">
+    <td align="center">
         <a href="https://github.com/leighflagg">
-            <img src="https://avatars.githubusercontent.com/u/77810293?v=4" width="100;" alt="leighflagg"/>
+            <img src="https://avatars.githubusercontent.com/shafiq9018" width="100;" alt="leighflagg"/>
             <br />
-            <sub><b>Null</b></sub>
+            <sub><b>Shafiq Rahman</b></sub>
         </a>
-    </td></tr><td align="center">
+    <td align="center">
         <a href="https://github.com/leighflagg">
-            <img src="https://avatars.githubusercontent.com/u/77810293?v=4" width="100;" alt="leighflagg"/>
+            <img src="https://avatars.githubusercontent.com/efiera" width="100;" alt="leighflagg"/>
             <br />
-            <sub><b>Null</b></sub>
+            <sub><b>Ellie Fiera</b></sub>
         </a>
-    </td></tr><td align="center">
+    <td align="center">
         <a href="https://github.com/leighflagg">
-            <img src="https://avatars.githubusercontent.com/u/77810293?v=4" width="100;" alt="leighflagg"/>
+            <img src="https://avatars.githubusercontent.com/RRodriguez26" width="100;" alt="leighflagg"/>
             <br />
-            <sub><b>Null</b></sub>
+            <sub><b>Rafael Perez</b></sub>
         </a>
-    </td></tr><td align="center">
+    <td align="center">
         <a href="https://github.com/leighflagg">
-            <img src="https://avatars.githubusercontent.com/u/77810293?v=4" width="100;" alt="leighflagg"/>
+            <img src="https://avatars.githubusercontent.com/Stapletonchris" width="100;" alt="leighflagg"/>
             <br />
-            <sub><b>Null</b></sub>
+            <sub><b>Christopher Luckie Christmas</b></sub>
         </a>
-    </td></tr><td align="center">
+    <td align="center">
         <a href="https://github.com/leighflagg">
-            <img src="https://avatars.githubusercontent.com/u/77810293?v=4" width="100;" alt="leighflagg"/>
+            <img src="https://avatars.githubusercontent.com/sh-jafri" width="100;" alt="leighflagg"/>
             <br />
-            <sub><b>Null</b></sub>
+            <sub><b>Sami Jafri</b></sub>
         </a>
-    </td></tr><td align="center">
+    <td align="center">
         <a href="https://github.com/leighflagg">
-            <img src="https://avatars.githubusercontent.com/u/77810293?v=4" width="100;" alt="leighflagg"/>
+            <img src="https://avatars.githubusercontent.com/sergiyPliss" width="100;" alt="leighflagg"/>
             <br />
-            <sub><b>Null</b></sub>
+            <sub><b>Sergiy Pliss</b></sub>
         </a>
     </td></tr>
 </table>
