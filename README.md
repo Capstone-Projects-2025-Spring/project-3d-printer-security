@@ -80,43 +80,50 @@ We can discuss these add / remove above per Professor Applebaum.
             <br />
             <sub><b>Null</b></sub>
         </a>
+    </td>
     <td align="center">
         <a href="https://github.com/leighflagg">
             <img src="https://avatars.githubusercontent.com/shafiq9018" width="100;" alt="leighflagg"/>
             <br />
             <sub><b>Shafiq Rahman</b></sub>
         </a>
+    </td>
     <td align="center">
         <a href="https://github.com/leighflagg">
             <img src="https://avatars.githubusercontent.com/efiera" width="100;" alt="leighflagg"/>
             <br />
             <sub><b>Ellie Fiera</b></sub>
         </a>
+    </td>
     <td align="center">
         <a href="https://github.com/leighflagg">
             <img src="https://avatars.githubusercontent.com/RRodriguez26" width="100;" alt="leighflagg"/>
             <br />
             <sub><b>Rafael Perez</b></sub>
         </a>
+    </td>
     <td align="center">
         <a href="https://github.com/leighflagg">
             <img src="https://avatars.githubusercontent.com/Stapletonchris" width="100;" alt="leighflagg"/>
             <br />
             <sub><b>Christopher Luckie Christmas</b></sub>
         </a>
+    </td>
     <td align="center">
         <a href="https://github.com/leighflagg">
             <img src="https://avatars.githubusercontent.com/sh-jafri" width="100;" alt="leighflagg"/>
             <br />
             <sub><b>Sami Jafri</b></sub>
         </a>
+    </td>
     <td align="center">
         <a href="https://github.com/leighflagg">
             <img src="https://avatars.githubusercontent.com/sergiyPliss" width="100;" alt="leighflagg"/>
             <br />
             <sub><b>Sergiy Pliss</b></sub>
         </a>
-    </td></tr>
+    </td>
+</tr>
 </table>
 
 [//]: # ( readme: collaborators -end )
