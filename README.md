@@ -116,7 +116,6 @@ We can discuss these add / remove above per Professor Applebaum.
             <br />
             <sub><b>Sergiy Pliss</b></sub>
         </a>
-    </td></tr>
 </table>
 
 [//]: # ( readme: collaborators -end )
