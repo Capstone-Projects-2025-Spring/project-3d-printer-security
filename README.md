@@ -22,23 +22,45 @@ Verion 1.0.0
 
 ## Project Abstract
 
-This document proposes a novel application of a text message (SMS or Email) read-out and hands-free call interacted between an Android Smartphone and an infotainment platform (headunit) in a car environment. When a phone receives an SMS or Email, the text message is transferred from the phone to the headunit through a Bluetooth connection. On the headunit, user can control which and when the received SMS or E-mail to be read out through the in-vehicle audio system. The user may press one button on the headunit to activate the hands-free feature to call back the SMS sender.
+3D Printer G-CODE Validation and Security Application
+
+The increasing accessibility of 3D printing has revolutionized manufacturing and prototyping or re-producing a part in a remote location. However, with the widespread us of printing 3D parts, there is a growing risk of maliciously altered or error-prone G-CODE files that could damage other equipment using the printed parts, or result in injury or fire. This project aims to develop an application to scan G-CODE files for potential threats or errors, ensuring safer and more reliable 3D printing.
+The application will analyze G-CODE files to identify issues such as out-of-bound commands, excessive temperature settings, user error, or malicious codes. It will also create a check list for the user to properly print the part with success check for bad G-CODE and suggest corrective measures. The application will flag the G-CODE if the files are un-safe, problematic, or malicious. The application will provide a summary to the user.
+The project’s goals include:
+1.	Enhancing 3D printer safety by mitigating the risks of hardware damage or accidents.
+2.	Streamlining the printing process by catching common errors before execution.
+3.	Providing a user-friendly interface for reviewing identified issues with actionable suggestions for resolution.
+This application has the potential to be a vital tool for 3D printing enthusiasts and professionals, ensuring higher print reliability, reduced downtime, and safer operation.
+
 
 ## High Level Requirement
 
-Describe the requirements – i.e., what the product does and how it does it from a user point of view – at a high level.
+The app will be an executable program with a graphical UI. It will be launched after CURA has sliced and saved the file to the USB drive or the desired folder. The app will scan that newly created G-CODE and alert the user to halt or continue based on the scan.
 
 ## Conceptual Design
 
-Describe the initial design concept: Hardware/software architecture, programming language, operating system, etc.
+The application will be written in Java or Python and it will be portable and executable for windows, linux, mac etc. The design will begin with scanning the for temperature range and temperature of hot plate to turn off after printing. The other variables will check for printer model and x,y,z are within limits. We can add more features such as a checklist for the user to make sure they have followed the correct steps to complete a successful print.
 
 ## Background
 
 The background will contain a more detailed description of the product and a comparison to existing similar projects/products. A literature search should be conducted and the results listed. Proper citation of sources is required. If there are similar open-source products, you should state whether existing source will be used and to what extent. If there are similar closed-source/proprietary products, you should state how the proposed product will be similar and different.
 
+I have found the following document that can shed light on types of work done for code protection.
+
+https://asmedigitalcollection.asme.org/computingengineering/article-abstract/21/4/041007/1089710/A-Blockchain-Based-G-Code-Protection-Approach-for?redirectedFrom=fulltext
+
+
 ## Required Resources
 
 Discuss what you need to develop this project. This includes background information you will need to acquire, hardware resources, and software resources. If these are not part of the standard Computer Science Department lab resources, these must be identified early and discussed with the instructor.
+
+I am proposing the following:
+- 3d Printer
+- Dedicated Temple provided computer
+- Remote vpn access to computer for working remotely to test code.
+- Camera pointed at the 3d Printer for remote testing.
+
+We can discuss these add / remove above per Professor Applebaum.
 
 ## Collaborators
 
@@ -58,50 +80,42 @@ Discuss what you need to develop this project. This includes background informat
             <br />
             <sub><b>Null</b></sub>
         </a>
-    </td>
     <td align="center">
         <a href="https://github.com/leighflagg">
             <img src="https://avatars.githubusercontent.com/shafiq9018" width="100;" alt="leighflagg"/>
             <br />
             <sub><b>Shafiq Rahman</b></sub>
         </a>
-    </td>
     <td align="center">
         <a href="https://github.com/leighflagg">
             <img src="https://avatars.githubusercontent.com/efiera" width="100;" alt="leighflagg"/>
             <br />
             <sub><b>Ellie Fiera</b></sub>
         </a>
-    </td>
     <td align="center">
         <a href="https://github.com/leighflagg">
             <img src="https://avatars.githubusercontent.com/RRodriguez26" width="100;" alt="leighflagg"/>
             <br />
             <sub><b>Rafael Perez</b></sub>
         </a>
-    </td>
     <td align="center">
         <a href="https://github.com/leighflagg">
             <img src="https://avatars.githubusercontent.com/Stapletonchris" width="100;" alt="leighflagg"/>
             <br />
             <sub><b>Christopher Luckie Christmas</b></sub>
         </a>
-    </td>
     <td align="center">
         <a href="https://github.com/leighflagg">
             <img src="https://avatars.githubusercontent.com/sh-jafri" width="100;" alt="leighflagg"/>
             <br />
             <sub><b>Sami Jafri</b></sub>
         </a>
-    </td>
     <td align="center">
         <a href="https://github.com/leighflagg">
             <img src="https://avatars.githubusercontent.com/sergiyPliss" width="100;" alt="leighflagg"/>
             <br />
             <sub><b>Sergiy Pliss</b></sub>
         </a>
-    </td>
-</tr>
 </table>
 
 [//]: # ( readme: collaborators -end )
