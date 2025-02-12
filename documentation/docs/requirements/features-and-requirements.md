@@ -5,13 +5,13 @@ sidebar_position: 4
 # Features and Requirements
 ## Functional Requirements
 -Executable must scan Cura generated g-code for:
-	-intersections in paths along all axes. 
-	-spikes in temperature of the print head.
-	-an excessive volume of filament.
+	- intersections in paths along all axes. 
+	- spikes in temperature of the print head.
+	- an excessive volume of filament.
 - Executable must scan pre sliced 3d model for:
-	-malicious code
-	-corrupt sections
-	-invalid files
+	- malicious code
+	- corrupt sections
+	- invalid files
 -Executable must raise a flag on detection of suspicious g-code and ask for manual approval. 
 - Executable file must have an associated configuration file that may be used to edit:
 	- maximum permitted filament.
