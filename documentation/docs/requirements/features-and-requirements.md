@@ -29,6 +29,6 @@ sidebar_position: 4
 - Security program must exist in the form of an executable file.
 
 ## Nonfunctional Requirements
--Executable should not impede normal function of its resident computer system. 
--Executable should run in background
--Executable should launch directly from file, without additional input.
+- Executable should not impede normal function of its resident computer system. 
+- Executable should run in background
+- Executable should launch directly from file, without additional input.
