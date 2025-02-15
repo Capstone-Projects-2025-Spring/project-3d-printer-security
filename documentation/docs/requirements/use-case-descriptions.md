@@ -48,7 +48,7 @@ sidebar_position: 5
   - Insert valid file.
   - Submit pre-print form.
   - Navy member clicks on a red "stop" button.
-  - A pop-up appears asking if the user sure, user have the option of either "Yes" or "No, proceed."
+  - A pop-up appears asking if the user sure they want to stop the process, user have the option of either "Yes" or "No, proceed."
 
 ## Use Case Six: Warning Selection
 
@@ -63,7 +63,7 @@ sidebar_position: 5
 
 - _As a Navy member, I would like to see the progress in which it is taking step-by-step so I can make sure it is going smoothly._
 
-  - After submitting the pre-print form, the page will change to the progress page.
+  - After submitting G-code file, the page will change to the progress page.
   - Depending on the amount of stage, Navy member will see green as in has passed, yellow as a warning, or red as an alert.
     - Green: Navy member does not have to do anything, this stage have passed.
     - Yellow: Navy member will have to decide to progress or not based on on Navy member's approval.
@@ -77,3 +77,13 @@ sidebar_position: 5
   - On the pre-print form, there’s a red box at the very bottom of the form before the submit button.
   - Navy member hover over and a tooltip appears, warning of potential risk of having to proceed with all of warning it finds.
   - Navy member clicks on either "Yes, Proceed" or "No."
+
+## Use case Nine: Adding new Modules
+
+- _As a Navy member, I would like to submit a new module in which it adds new way of scanning._
+
+  - On the main page, user clicks "Add new module" into a box with a plus icon.
+  - User will insert title of the module in the title field.
+  - User will then insert python code into the file dropdown in which it will publish the code.
+  - User will click a green "add" button to officially submit.
+  
