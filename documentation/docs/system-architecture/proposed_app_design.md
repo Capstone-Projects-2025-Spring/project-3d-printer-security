@@ -8,5 +8,43 @@ The application will consist of two parts. There will be a frontend web-based ap
 
 For this project, we will choose Windows-based hardware as our platform for the backend application and the frontend application will be Web based, therefore most popular OS should be able to load that component.
 
+Below is some sample code for transferring files in Python. This was an auto generated program when I did a search for file transfer or socket libraries. 
 
+```aiignore
+import socket
+import os
 
+def send_file(filename, host, port):
+    s = socket.socket()
+    s.connect((host, port))
+    filesize = os.path.getsize(filename)
+    s.send(f"{filename}{SEPARATOR}{filesize}".encode())
+    with open(filename, "rb") as f:
+        while True:
+            bytes_read = f.read(BUFFER_SIZE)
+            if not bytes_read:
+                break
+            s.sendall(bytes_read)
+    s.close()
+
+def receive_file(host, port, save_path):
+    s = socket.socket()
+    s.bind((host, port))
+    s.listen(5)
+    client_socket, address = s.accept()
+    received = client_socket.recv(BUFFER_SIZE).decode()
+    filename, filesize = received.split(SEPARATOR)
+    filename = os.path.basename(filename)
+    filesize = int(filesize)
+    with open(os.path.join(save_path,filename), "wb") as f:
+        bytes_received = 0
+        while bytes_received < filesize:
+            l = client_socket.recv(BUFFER_SIZE)
+            f.write(l)
+            bytes_received += len(l)
+    client_socket.close()
+    s.close()
+
+SEPARATOR = "<SEPARATOR>"
+BUFFER_SIZE = 4096
+```
