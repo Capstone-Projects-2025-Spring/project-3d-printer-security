@@ -23,7 +23,7 @@ sidebar_position: 6
 
 # 🔄 Revisiting the 3D-Printing Block Diagram
 
-![img_3.png](img_3.png)  
+![img_3.png](images/img_3.png)  
 **Diagram B**
 
 Diagram B presents a **high-level view** of the application components in a **typical network environment**.  

@@ -21,6 +21,7 @@ sidebar_position: 1
 ---
 
 ### **Repository URL**
+
 [🔗 Capstone 3D Printer Security Project](https://github.com/Capstone-Projects-2025-Spring/project-3d-printer-security)
 
 ---

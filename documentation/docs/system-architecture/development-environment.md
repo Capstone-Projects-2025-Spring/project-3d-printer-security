@@ -25,7 +25,7 @@ The **G-Code Pre-Print Auditing System** is developed using a **structured and m
 
 ---
 
-### **2.2 Software Dependencies**
+### **2.2 Software Dev Dependencies**
 The project requires the following software and libraries:
 
 #### **Frontend (Web GUI)**
@@ -50,9 +50,12 @@ The project requires the following software and libraries:
 ---
 
 ## **3. Setup Instructions**
-Coming soon for setting up IDE for frontend and backend development.
 
-### **3.1 Cloning the Repository**
+### Configuring a Markdown Project with Add-ins in IntelliJ IDEA ###
+
+Configurations for IntelliJ and VS CODE vary drastically so this is upto the programmer and skill set to configure the IDE. Here is a suggested place to start.
+
+## **3.1 Cloning the Repository** ##S
 ```sh
 git clone https://github.com/Capstone-Projects-2025-Spring/project-3d-printer-security.git
 cd project-3d-printer-security
