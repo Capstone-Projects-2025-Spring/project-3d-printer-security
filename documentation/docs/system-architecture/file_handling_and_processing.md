@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# 📂 File Handling and Processing
+# File Handling and Processing
 
 - Files are received as **PDF documents** containing the part.
 - A **Cura slicer** on the computer slices the part and converts it to **G-Code** for printing.
