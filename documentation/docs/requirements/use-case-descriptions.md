@@ -17,11 +17,11 @@ sidebar_position: 5
 
 - _As a Navy member, I would like to scan the file so I can prevent malicious parts of the code from doing unexpected actions._
 
+  - Open G-code scan module.
   - In the middle of the page, drag the file into the box that says "insert file here."
   - Insert g-code file, box turns green.
-  - Navy member on the bottom left and click "proceed."
-  - A pre-print form appears to adjust any potential warning the Navy member would not mind skipping.
-  - Navy member clicks on a green "go" button.
+  - A pre-print form gets enabled to adjust any potential warning the Navy member would not mind skipping.
+  - Navy member clicks on a green "Go" button.
 
 ## Use Case Three: Inserting An Invalid File
 
@@ -32,16 +32,7 @@ sidebar_position: 5
   - A red modal appears reaffirming that a valid file must be dragged to the box.
   - Navy member clicks on a grey "Retry" button.
 
-## Use Case Four: Pre-Print Form
-
-- _As a Navy member, _I would like to submit a pre-requisite parameter so that the application scan accurately._
-
-  - Insert valid file.
-  - In the middle of the page, Navy member will fill parameters in the form.
-  - When Navy member finish filling all required field, green "proceed" button appear enabled.
-  - User click "proceed."
-
-## Use Case Five: Cancellation
+## Use Case Four: Cancellation
 
 - _As a Navy member, _I would like to cancel on-going process so that the application stop scanning and prevent any malfunctioning._
 
@@ -50,16 +41,7 @@ sidebar_position: 5
   - Navy member clicks on a red "stop" button.
   - A pop-up appears asking if the user sure they want to stop the process, user have the option of either "Yes" or "No, proceed."
 
-## Use Case Six: Warning Selection
-
-- _As a Navy member, I would like to adjust warnings so I can be able to detect any potential unexpected process to prevent printer from malfunctioning._
-
-  - Insert valid file.
-  - Submit pre-print form.
-  - Warning pop up appears, message contain options to allow user to proceed or to halt the process.
-  - User clicks on either “proceed” or “stop” option.
-
-## Use Case Seven: Progress Visuals
+## Use Case Five: Progress Visuals
 
 - _As a Navy member, I would like to see the progress in which it is taking step-by-step so I can make sure it is going smoothly._
 
@@ -70,7 +52,7 @@ sidebar_position: 5
     - Red: Navy member will have no choice but to fix issues identified by the application.
   - If all stages passed, the file will be sent to the printer, or back to the USB drive based on Navy member choice of injection.
 
-## Use Case Eight: Auto-Approve warnings
+## Use Case Six: Auto-Approve warnings
 
 - _As a Navy member, I would like to auto-approve all of the process warnings so I can 3D print faster._
 
@@ -78,7 +60,7 @@ sidebar_position: 5
   - Navy member hover over and a tooltip appears, warning of potential risk of having to proceed with all of warning it finds.
   - Navy member clicks on either "Yes, Proceed" or "No."
 
-## Use case Nine: Adding new Modules
+## Use case Seven: Adding new Modules
 
 - _As a Navy member, I would like to submit a new module in which it adds new way of scanning._
 
