@@ -18,4 +18,4 @@ OctoPrint allows full control over every aspect of a 3D printer and its capabili
 -  However, clients with appropriate privileges may be granted access to OctoPrint’s web interface for real-time monitoring.
 -  The frontend application will be the primary interface for users to submit print jobs and interact with the system.
 
-This approach ensures secure, structured, and controlled access to 3D printing management, enhancing workflow efficiency and fast availability for the next print.
+This approach ensures secure, structured, and controlled access to 3D print management, enhancing workflow efficiency and fast availability for the next print job.

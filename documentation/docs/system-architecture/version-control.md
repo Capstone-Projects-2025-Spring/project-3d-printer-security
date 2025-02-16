@@ -8,7 +8,7 @@ sidebar_position: 4
 ---
 
 ### **1. The G-Code Pre-Print Scanning Software Version Control Example**
-- The frontend and backend application will be hosted on github and shared to the client or customer for keeping track of old and new versions.
+- The frontend and backend application will be hosted on **Github** and shared to the client or customer for keeping track of old and new versions.
 
 ---
 

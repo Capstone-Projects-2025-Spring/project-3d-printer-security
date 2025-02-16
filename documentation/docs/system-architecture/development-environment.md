@@ -15,13 +15,13 @@ The **G-Code Pre-Print Auditing System** is developed using a **structured and m
 ## **2. System Requirements**
 
 ### **2.1 Hardware Requirements**
-| Component             | Minimum Specification                | Recommended Specification           |
-|----------------------|--------------------------------------|-------------------------------------|
-| Processor           | Within 5 years                       | n/a                                 |
-| RAM                | 8GB                                  | 16GB or higher                      |
-| Storage            | n/a                                  | n/a                                 |
-| OS Compatibility   | Ubuntu 20.04+, Windows 10+, OS X 13+ | Ubuntu 22.04+, Windows 11, OS X 13+ |
-| Raspberry Pi (if used) | Raspberry Pi 4                       | Raspberry Pi 4,5                    |
+| Component                       | Minimum Specification                | Recommended Specification           |
+|---------------------------------|--------------------------------------|-------------------------------------|
+| Processor                       | Within 5 years                       | n/a                                 |
+| RAM                             | 8GB                                  | 16GB or higher                      |
+| Storage                         | n/a                                  | n/a                                 |
+| OS Compatibility                | Ubuntu 20.04+, Windows 10+, OS X 13+ | Ubuntu 22.04+, Windows 11, OS X 13+ |
+| Raspberry Pi **(Not Required)** | Raspberry Pi 4                       | Raspberry Pi 4                      |
 
 ---
 

@@ -7,16 +7,6 @@ sidebar_position: 1
 # **Design**
 
 ## **Part I - Architecture**
-**CIS 4398 Section 001**  
-**Spring 2025**
-
-## **Team Members:**
-- **Rafael Perez Rodriguez**
-- **Ellie Fiera**
-- **Sergiy Pliss**
-- **Shafiq Rahman**
-- **Sami Jafri**
-- **Chris Christmas**
 
 ---
 
