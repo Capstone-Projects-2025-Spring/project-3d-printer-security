@@ -53,3 +53,17 @@ REST API General information is obtained by visiting their website. There is a w
 https://docs.octoprint.org/en/master/api/general.html
 
 This document will not go into details of any code unless deemed necessary for some unclear workflows.
+
+**Choice of Architecture:**
+
+The architecture of the project is a scaled down layered architecture pattern, with three layers. The pattern was selected for its simplicity and to better organise workflow during sprints, as the layers could be separated into smaller atomized tasks.
+
+The layers are separated into the UI layer, the application layer, and the data layer. The UI layer works autonomously and only relays information to the user, and thus could be developed independently. The application layer is where the g-code files are scanned, and only needs to share an agreed on format for data in order to be integrated into the project. If there were more integration between the layers, another design pattern would have been considered. 
+
+The components are static and communication is bidirectional over a local network only. For this reason no networking was considered, thus networking related patterns could not be used. 
+
+**Scalability:**
+
+The components can be scaled horizontally by adding more printers. There is little need for vertical scaling, as the computations are simple and one computer can handle a large amount of printers. Since printers are a physical object, and communication is local the number of printers is limited by the amount of physical space. An aircraft carrier needs a small amount of printers thus scalability is possible but unnecessary. 
+
+
