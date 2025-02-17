@@ -46,3 +46,22 @@ Diagram B presents a **high-level view** of the application components in a **ty
 - **🖥️ Local Server** – Local network server / file server.
 
 ---
+
+## API Interactions 
+
+### OctoPi rest API 
+
+- ` actual `: Returns current temperature of print head. 
+- ` flags.ready `: Returns true if printer is operational.
+- ` text ` : Returns one word status of printer.
+- ` filament.volume ` : Returns volume of filament used.
+-  ` completion `  : Returns percent completion of current job.
+-  ` filament ` : Returns estimated use of filament.
+-  ` filepos ` : Returns current position in file.
+-   ` dimensions ` : Dimensions of file.
+
+These are the most common calls that may be made to the OctoPi API.
+Upon encountering an exception, or the exceeding of allotted
+boundaries a shutdown command may be issued via `cancel`. 
+
+---
