@@ -24,43 +24,64 @@ Verion 1.0.0
 
 3D Printer G-CODE Validation and Security Application
 
-The increasing accessibility of 3D printing has revolutionized manufacturing and prototyping or re-producing a part in a remote location. However, with the widespread us of printing 3D parts, there is a growing risk of maliciously altered or error-prone G-CODE files that could damage other equipment using the printed parts, or result in injury or fire. This project aims to develop an application to scan G-CODE files for potential threats or errors, ensuring safer and more reliable 3D printing.
-The application will analyze G-CODE files to identify issues such as out-of-bound commands, excessive temperature settings, user error, or malicious codes. It will also create a check list for the user to properly print the part with success check for bad G-CODE and suggest corrective measures. The application will flag the G-CODE if the files are un-safe, problematic, or malicious. The application will provide a summary to the user.
+The increasing accessibility of 3D printing has revolutionized manufacturing and prototyping or re-producing a part in a remote location.
+However, with the widespread use of printing 3D parts,
+there is a growing risk of maliciously altered or error-prone G-CODE files
+that could damage the equipment while printing a parts,
+or result in injury or fire.
+This project aims to develop an application to scan G-CODE files for potential threats or errors,
+ensuring safer and more reliable 3D printing.
+The application will analyze G-CODE files to identify issues such as out-of-bound commands,
+excessive temperature settings, user error, or malicious codes.
+It will also create an alert for the client to take proper action to remediate
+and then successfully print the part with success check for bad G-CODE and suggest corrective measures.
+The application will flag the G-CODE if the files are error-prone, or malicious.
+The application will provide a summary to the client via the front end application.
 The project’s goals include:
-1.	Enhancing 3D printer safety by mitigating the risks of hardware damage or accidents.
-2.	Streamlining the printing process by catching common errors before execution.
+1.	Enhancing 3D printer safety by mitigating the risks of hardware damage or prevent or stop malicious code from running on the 3D printer.
+2.	Streamlining the printing process by catching common errors before execution will increase productivity and prevent downtime.
 3.	Providing a user-friendly interface for reviewing identified issues with actionable suggestions for resolution.
-This application has the potential to be a vital tool for 3D printing enthusiasts and professionals, ensuring higher print reliability, reduced downtime, and safer operation.
+This application has the potential to be a vital tool for 3D printing enthusiasts and professionals, ensuring higher print reliability, prevent downtime, and safer operation.
 
 
 ## High Level Requirement
 
-The app will be an executable program with a graphical UI. It will be launched after CURA has sliced and saved the file to the USB drive or the desired folder. The app will scan that newly created G-CODE and alert the user to halt or continue based on the scan.
+The application will have a frontend and backend program with the frontend graphical UI.
+It will be used after CURA completed slicing a file into g-code.
+The g-code file will be accessed by the frontend application
+and sent to the backend g-code scanning application to be submitted for printing.
+The backend application will scan that newly created G-CODE and alert the user to halt or continue based on the scan.
 
 ## Conceptual Design
 
-The application will be written in Java or Python and it will be portable and executable for windows, linux, mac etc. The design will begin with scanning the for temperature range and temperature of hot plate to turn off after printing. The other variables will check for printer model and x,y,z are within limits. We can add more features such as a checklist for the user to make sure they have followed the correct steps to complete a successful print.
+The application facets will be developed by our front end team and backend team.
+It will be compatible for devices running on any modern network.
+The designed application functionality includes scanning for incorrect temperature ranges out of bound commands,
+unnecessary commands to disable limit switches,
+and including to prevent malicious code from colliding the print head into the part. The job of the software will be to stop the print job from being executed on the printer.
 
-## Background
+## Background Summary
 
-The background will contain a more detailed description of the product and a comparison to existing similar projects/products. A literature search should be conducted and the results listed. Proper citation of sources is required. If there are similar open-source products, you should state whether existing source will be used and to what extent. If there are similar closed-source/proprietary products, you should state how the proposed product will be similar and different.
+In government and military computer usage policies, USB drives for storage are highly regulated.
+This makes using USB drive scanning before printing makes it impracticable.
+Therefore, all agencies under this umbrella use secure networks for printing and communication. To ensure compaitbility and functionality the G-code scanning application will have network capability.
 
-I have found the following document that can shed light on types of work done for code protection.
+1.	Seamless integration with all networked devices where 3D printing security is in high demand.
+2.	Future scalability to handle multiple files and print multiple jobs sent to more than one printer.
+3.	Ability of additions for new features, without major architectural changes. 
 
+See the following link for more informaiton on how others are addressing 3D printing security.   
 https://asmedigitalcollection.asme.org/computingengineering/article-abstract/21/4/041007/1089710/A-Blockchain-Based-G-Code-Protection-Approach-for?redirectedFrom=fulltext
 
 
 ## Required Resources
 
-Discuss what you need to develop this project. This includes background information you will need to acquire, hardware resources, and software resources. If these are not part of the standard Computer Science Department lab resources, these must be identified early and discussed with the instructor.
-
-I am proposing the following:
+This project will require the following resources. 
 - 3d Printer
+- Raspberry Pie
 - Dedicated Temple provided computer
 - Remote vpn access to computer for working remotely to test code.
-- Camera pointed at the 3d Printer for remote testing.
-
-We can discuss these add / remove above per Professor Applebaum.
+- A camera pointed at the 3d Printer for remote testing.
 
 ## Collaborators
 
