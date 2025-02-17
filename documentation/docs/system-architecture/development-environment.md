@@ -55,7 +55,7 @@ The project requires the following software and libraries:
 
 Configurations for IntelliJ and VS CODE vary drastically so this is upto the programmer and skill set to configure the IDE. Here is a suggested place to start.
 
-## **3.1 Cloning the Repository** ##S
+## **3.1 Cloning the Repository**
 ```sh
 git clone https://github.com/Capstone-Projects-2025-Spring/project-3d-printer-security.git
 cd project-3d-printer-security
