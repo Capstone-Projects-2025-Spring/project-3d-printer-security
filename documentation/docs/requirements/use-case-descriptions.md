@@ -64,6 +64,8 @@ sidebar_position: 5
 
 ## Use Case Six: Auto-Approve warnings
 
+![Use Case Six](use-case-sequence-diagram-image/UseCaseSix.png)
+
 - _As a Navy member, I would like to auto-approve all of the process warnings so I can 3D print faster._
 
   - On the pre-print form, there’s a red box at the very bottom of the form before the submit button.
@@ -71,6 +73,8 @@ sidebar_position: 5
   - Navy member clicks on either "Yes, Proceed" or "No."
 
 ## Use case Seven: Adding new Modules
+
+![Use Case Seven](use-case-sequence-diagram-image/UseCaseSeven.png)
 
 - _As a Navy member, I would like to submit a new module in which it adds new way of scanning._
 
