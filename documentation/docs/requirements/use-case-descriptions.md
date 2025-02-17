@@ -6,6 +6,8 @@ sidebar_position: 5
 
 ## Use Case One: Navigating to Instruction Page
 
+  ![Use Case One](use-case-sequence-diagram-image/UseCaseOne.jpg)
+
 - _As a Navy member, I would like to see instructions on how to use the application so I can be able to learn how to use it._
 
   - On the initial page, on the bottom right corner, there is a question mark icon. A user will click it.
@@ -14,6 +16,8 @@ sidebar_position: 5
   - To exit, click on the "X" icon on the top right of the page to exit. Returns to the main page.
 
 ## Use Case Two: Inserting A Valid File
+
+![Use Case Two](use-case-sequence-diagram-image/UseCaseTwo.jpg)
 
 - _As a Navy member, I would like to scan the file so I can prevent malicious parts of the code from doing unexpected actions._
 
@@ -25,6 +29,8 @@ sidebar_position: 5
 
 ## Use Case Three: Inserting An Invalid File
 
+![Use Case Three](use-case-sequence-diagram-image/UseCaseThree.jpg)
+
 - _As a Navy member, I would like to have invalid files rejected so that invalid files do not get processed._
 
   - In the middle of the page, drag the file into the box that says "insert file here."
@@ -34,6 +40,8 @@ sidebar_position: 5
 
 ## Use Case Four: Cancellation
 
+![Use Case Four](use-case-sequence-diagram-image/UseCaseFour.jpg)
+
 - _As a Navy member, _I would like to cancel on-going process so that the application stop scanning and prevent any malfunctioning._
 
   - Insert valid file.
@@ -42,6 +50,8 @@ sidebar_position: 5
   - A pop-up appears asking if the user sure they want to stop the process, user have the option of either "Yes" or "No, proceed."
 
 ## Use Case Five: Progress Visuals
+
+![Use Case Five](use-case-sequence-diagram-image/UseCaseFive.jpg)
 
 - _As a Navy member, I would like to see the progress in which it is taking step-by-step so I can make sure it is going smoothly._
 
@@ -54,6 +64,8 @@ sidebar_position: 5
 
 ## Use Case Six: Auto-Approve warnings
 
+![Use Case Six](use-case-sequence-diagram-image/UseCaseSix.png)
+
 - _As a Navy member, I would like to auto-approve all of the process warnings so I can 3D print faster._
 
   - On the pre-print form, there’s a red box at the very bottom of the form before the submit button.
@@ -61,6 +73,8 @@ sidebar_position: 5
   - Navy member clicks on either "Yes, Proceed" or "No."
 
 ## Use case Seven: Adding new Modules
+
+![Use Case Seven](use-case-sequence-diagram-image/UseCaseSeven.png)
 
 - _As a Navy member, I would like to submit a new module in which it adds new way of scanning._
 
