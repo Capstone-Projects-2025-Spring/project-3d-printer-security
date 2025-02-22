@@ -1,7 +1,6 @@
 ---
 sidebar_position: 3
 ---
-
 # SecurityPlugin
 
 ## `public class FileManager`
@@ -20,7 +19,7 @@ A method that adds new g-code files to the queue.
 
 * **Returns:** False if queue is empty,  True otherwise.
 
-## `public String has_files()`
+## `public String get_file()`
 
 * **Returns:** The first g-code file in the queue as a String.
   
@@ -48,7 +47,7 @@ Configuration is a class responsible for reading and writing to the configuratio
 This is the maximum permited amount of filament. 
 
 
-## `public float __temperature`
+## `public float __mtemperature`
 
 This is the maximum permited amount of temperature. 
 
