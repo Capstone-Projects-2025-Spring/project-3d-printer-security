@@ -6,7 +6,21 @@ sidebar_position: 5
 
 ## Use Case One: Navigating to Instruction Page
 
-  ![Use Case One](use-case-sequence-diagram-image/UseCaseOne.jpg)
+```mermaid
+sequenceDiagram
+  actor NavyMember
+  NavyMember->>HomePage: Navy Member clicks on "?"
+  activate HomePage
+  HomePage->>InstructionsPage: openInstruction()
+  activate InstructionsPage
+  InstructionsPage->>InstructionsPage: Click Section One
+  InstructionsPage->>InstructionsPage: Click Section Two
+  InstructionsPage->>InstructionsPage: Click Section Three
+  InstructionsPage-->>HomePage: Click on the "X" icon
+  deactivate InstructionsPage
+  deactivate HomePage
+
+```
 
 - _As a Navy member, I would like to see instructions on how to use the application so I can be able to learn how to use it._
 
