@@ -19,7 +19,6 @@ sequenceDiagram
   InstructionsPage-->>HomePage: Click on the "X" icon
   deactivate InstructionsPage
   deactivate HomePage
-
 ```
 
 - _As a Navy member, I would like to see instructions on how to use the application so I can be able to learn how to use it._
@@ -31,7 +30,23 @@ sequenceDiagram
 
 ## Use Case Two: Inserting A Valid File
 
-![Use Case Two](use-case-sequence-diagram-image/UseCaseTwo.jpg)
+```mermaid
+sequenceDiagram
+  actor NavyMember
+  NavyMember->>HomePage: User clicks on "G-code Scan" module
+  activate HomePage
+  HomePage->>Module: openModule(object)
+  activate Module
+  Module->>GCodeScan: File is inserted
+  activate GCodeScan
+  GCodeScan->>GCodeScan: Scan file for validity
+  GCodeScan-->>Module: Returns true
+  deactivate GCodeScan
+  Module->>Module: Enable Pre-Print form
+  Module->>Module: Submit Pre-Print form by pressing "Go"
+  deactivate Module
+
+```
 
 - _As a Navy member, I would like to scan the file so I can prevent malicious parts of the code from doing unexpected actions._
 
@@ -43,7 +58,22 @@ sequenceDiagram
 
 ## Use Case Three: Inserting An Invalid File
 
-![Use Case Three](use-case-sequence-diagram-image/UseCaseThree.jpg)
+```mermaid
+sequenceDiagram
+  actor NavyMember
+  NavyMember->>HomePage: User clicks on "G-code Scan" module
+  activate HomePage
+  HomePage->>Module: openModule(object)
+  activate Module
+  Module->>GCodeScan: File is inserted
+  activate GCodeScan
+  GCodeScan->>GCodeScan: Scan file for validity (isValid())
+  GCodeScan-->>Module: Returns false
+  deactivate GCodeScan
+  Module->>Module: Modal pops up alerting user
+  Module->>Module: User press "Retry"
+  deactivate Module
+```
 
 - _As a Navy member, I would like to have invalid files rejected so that invalid files do not get processed._
 
@@ -54,7 +84,28 @@ sequenceDiagram
 
 ## Use Case Four: Cancellation
 
-![Use Case Four](use-case-sequence-diagram-image/UseCaseFour.jpg)
+```mermaid
+sequenceDiagram
+  actor NavyMember
+  NavyMember->>HomePage: User clicks on "G-code Scan" module
+  activate HomePage
+  HomePage->>Module: openModule(object)
+  activate Module
+  Module->>GCodeScan: File is inserted
+  activate GCodeScan
+  GCodeScan->>GCodeScan: Scan file for validity
+  GCodeScan-->>Module: Returns true
+  deactivate GCodeScan
+  Module->>Module: Enable Pre-Print form
+  Module->>Module: Submit Pre-Print form by pressing "Go"
+  Module->>GCodeScan: Scan the file
+  activate GCodeScan
+  Module->>GCodeScan: Cancel the process (click "stop")
+  Module->>Module: User clicks "Yes" to be sure
+  Module-XGCodeScan: Cancel the process (click "stop")
+  deactivate GCodeScan
+  deactivate Module
+```
 
 - _As a Navy member, _I would like to cancel on-going process so that the application stop scanning and prevent any malfunctioning._
 
