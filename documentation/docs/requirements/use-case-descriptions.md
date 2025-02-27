@@ -45,6 +45,7 @@ sequenceDiagram
   Module->>Module: Enable Pre-Print form
   Module->>Module: Submit Pre-Print form by pressing "Go"
   deactivate Module
+  deactivate HomePage
 
 ```
 
@@ -73,6 +74,7 @@ sequenceDiagram
   Module->>Module: Modal pops up alerting user
   Module->>Module: User press "Retry"
   deactivate Module
+  deactivate HomePage
 ```
 
 - _As a Navy member, I would like to have invalid files rejected so that invalid files do not get processed._
@@ -105,6 +107,7 @@ sequenceDiagram
   Module-XGCodeScan: Cancel the process (click "stop")
   deactivate GCodeScan
   deactivate Module
+  deactivate HomePage
 ```
 
 - _As a Navy member, _I would like to cancel on-going process so that the application stop scanning and prevent any malfunctioning._
@@ -116,7 +119,28 @@ sequenceDiagram
 
 ## Use Case Five: Progress Visuals
 
-![Use Case Five](use-case-sequence-diagram-image/UseCaseFive.jpg)
+```mermaid
+sequenceDiagram
+  actor NavyMember
+  NavyMember->>HomePage: User clicks on "G-code Scan" module
+  activate HomePage
+  HomePage->>Module: openModule(object)
+  activate Module
+  Module->>GCodeScan: File is inserted
+  activate GCodeScan
+  GCodeScan->>GCodeScan: Scan file for validity
+  GCodeScan-->>Module: Returns true
+  Module->>Module: Submit Pre-Print form by pressing "Go"
+  Module->>GCodeScan: Scan the file
+  GCodeScan->>GCodeScan: Stage 1 Pass Successfully
+  GCodeScan-->>Module: Turn stage 1 Progress Bubble green
+  GCodeScan->>GCodeScan: Stage 2-3 Pass Succesfully
+  GCodeScan-->>Module: Turn stage 2-3 Progress Bubble green
+  deactivate GCodeScan
+  Module-->>HomePage: Click "Finish"
+  deactivate Module
+  deactivate HomePage
+```
 
 - _As a Navy member, I would like to see the progress in which it is taking step-by-step so I can make sure it is going smoothly._
 
@@ -129,7 +153,24 @@ sequenceDiagram
 
 ## Use Case Six: Auto-Approve warnings
 
-![Use Case Six](use-case-sequence-diagram-image/UseCaseSix.png)
+```mermaid
+sequenceDiagram
+  actor NavyMember
+  NavyMember->>HomePage: User clicks on "G-code Scan" module
+  activate HomePage
+  HomePage->>Module: openModule(object)
+  activate Module
+  Module->>GCodeScan: File is inserted
+  activate GCodeScan
+  GCodeScan->>GCodeScan: Scan file for validity
+  GCodeScan-->>Module: Returns false
+  deactivate GCodeScan
+  Module->>Module: Modal pops up alerting User
+  Module->>Module: User selects to auto approve warnings in pre print
+  Module->>Module: Submit pre print form by pressing "Go"
+  deactivate Module
+  deactivate HomePage
+```
 
 - _As a Navy member, I would like to auto-approve all of the process warnings so I can 3D print faster._
 
@@ -139,7 +180,21 @@ sequenceDiagram
 
 ## Use case Seven: Adding new Modules
 
-![Use Case Seven](use-case-sequence-diagram-image/UseCaseSeven.png)
+```mermaid
+sequenceDiagram
+  actor NavyMember
+  NavyMember->>HomePage: Navy Member is in main page
+  activate HomePage
+  create participant Module
+  HomePage->>Module: User click "Add new module"
+  activate Module
+  Module->>Module: User inserts title of the new module
+  Module->>Module: User inserts python code into file dropdown
+  Module->>Module: User clicks green "Add" button to complete
+  Module-->>HomePage: New Module added to HomePage
+  deactivate Module
+  deactivate HomePage
+```
 
 - _As a Navy member, I would like to submit a new module in which it adds new way of scanning._
 
