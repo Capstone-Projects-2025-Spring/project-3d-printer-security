@@ -1,0 +1,89 @@
+name: Test install of branches and latest release twice per day
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */12 * * *"
+
+jobs:
+  install-branch:
+    name: Install branch
+    strategy:
+      matrix:
+        os: ["ubuntu-22.04"] # change back to ubuntu-latest once we drop Python 3.7
+        python: ["3.7", "3.8", "3.9", "3.10", "3.11"]
+        branch: ["master", "release"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: ⬇ Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          path: src
+
+      - name: 🐍 Set up Python ${{ matrix.python }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+
+      # Checkout code and install
+      - name: ⬇ Checkout code to test
+        if: ${{ matrix.branch != 'release' }}
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.branch }}
+          fetch-depth: 0
+          path: checkout
+      - name: 👷 Build and install checkout
+        if: ${{ matrix.branch != 'release' }}
+        working-directory: checkout
+        run: |
+          pip install .
+
+      # Install latest release
+      - name: 👀 Determine latest release
+        if: ${{ matrix.branch == 'release' }}
+        run: |
+          OCTOPRINT_VERSION=$(curl -i https://github.com/OctoPrint/OctoPrint/releases/latest | grep -i location: | head -n1 | awk -F/ '{print $NF}' | tr -d '\r')
+          echo "OCTOPRINT_VERSION=$OCTOPRINT_VERSION" >> $GITHUB_ENV
+      - name: 👷 Build and install latest release
+        if: ${{ matrix.branch == 'release' }}
+        run: |
+          pip install https://github.com/OctoPrint/OctoPrint/archive/${{ env.OCTOPRINT_VERSION }}.zip
+
+      # Test if server starts without error
+      - name: 🏗 Create base config for test server
+        run: |
+          mkdir e2econfig
+          cp -r src/.github/fixtures/with_acl/* e2econfig
+      - name: 🧪 Start OctoPrint server
+        run: |
+          timeout -k 10s 30s octoprint serve --basedir e2econfig &
+          wait
+      - name: 🔎 Check octoprint.log for errors
+        run: |
+          log=${{ github.workspace }}/e2econfig/logs/octoprint.log
+          if grep "\- ERROR \-" $log; then
+            echo "::error::Errors were logged to octoprint.log"
+            grep -Pazo '(?m)^\N+\- ERROR \-\N*\n(^\N*?\n)*?(?=\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3} \- )' $log
+            exit 1
+          fi
+
+      - name: 📧 Discord success notification
+        continue-on-error: true
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.discord_webhook }}
+        uses: Ilshidur/action-discord@master
+        with:
+          args: "☑️ Test install on Python ${{ matrix.python }} under `${{ matrix.os }}` for `OctoPrint/OctoPrint:${{ matrix.branch }}` was successful"
+      - name: 📧 Discord failure notification
+        continue-on-error: true
+        if: failure()
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.discord_webhook }}
+        uses: Ilshidur/action-discord@master
+        with:
+          args: "🚫 Test install on Python ${{ matrix.python }} under `${{ matrix.os }}` for `OctoPrint/OctoPrint:${{ matrix.branch }}` failed"

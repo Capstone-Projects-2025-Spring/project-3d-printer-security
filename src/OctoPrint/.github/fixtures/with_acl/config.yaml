@@ -1,0 +1,26 @@
+accessControl:
+  salt: zXmvzI3uWuTLkSPOEfA2ZLwn3f3sGUNS
+devel:
+  enableRateLimiter: false
+  enableCsrfProtection: false
+plugins:
+  softwareupdate:
+    checks:
+      octoprint:
+        disabled: true
+  tracking:
+    enabled: false
+  virtual_printer:
+    enabled: true
+server:
+  firstRun: false
+  onlineCheck:
+    enabled: false
+  pluginBlacklist:
+    enabled: false
+  secretKey: rrdHjvmeGMPSdYWg2NGdiM7mpz9pjekk
+  seenWizards:
+    backup: null
+    corewizard: 3
+    file_check: 1
+    tracking: null
