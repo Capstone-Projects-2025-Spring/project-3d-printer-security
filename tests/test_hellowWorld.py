@@ -25,7 +25,7 @@ class TestHelloWorld(unittest.TestCase):
         self.assertEqual(hw.get_text(), testText)
 
     def test_add_exclamation(self):
-        testText = "Hello World"  # Words without the !
+        testText = "Hello World!"  # Words without the !
         hw = HelloWorld(testText)
         self.assertEqual(hw.get_text(), testText)
 
