@@ -1,4 +1,0 @@
-env:
-  browser: true
-  jquery: true
-  es2018: true
