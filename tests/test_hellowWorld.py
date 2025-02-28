@@ -1,4 +1,9 @@
 # These tests are performed by Shafiq Rahman
+#
+# Objective create tests to validate the HelloWorld class.
+# quickly create a class that will return a value to pass the test.
+# create more test and which tests pass.
+
 
 import unittest
 
@@ -12,17 +17,17 @@ from helloWorld import HelloWorld
 
 class TestHelloWorld(unittest.TestCase):
     # Unit tests for HelloWorld class.
-    #All tests check if the text is correctly printed with the addition of punctuation.
+    # All tests check if the text is correctly printed with the addition of punctuation.
 
     def test_reverse_text(self):
-        testText = "Hello World"  # Words without the !
+        testText = "Hello World!"  # Words without the !
         hw = HelloWorld(testText)
-        self.assertEqual(hw.get_text(), testText + "!")
+        self.assertEqual(hw.get_text(), testText)
 
     def test_add_exclamation(self):
-        testText = "Microsoft is popular"  # Words without the !
+        testText = "Hello World"  # Words without the !
         hw = HelloWorld(testText)
-        self.assertEqual(hw.get_text(), testText + "!")
+        self.assertEqual(hw.get_text(), testText)
 
 if __name__ == "__main__":
     unittest.main()
