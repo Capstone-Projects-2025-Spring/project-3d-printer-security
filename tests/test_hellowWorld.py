@@ -15,19 +15,14 @@ class TestHelloWorld(unittest.TestCase):
     #All tests check if the text is correctly printed with the addition of punctuation.
 
     def test_reverse_text(self):
-        test = "Hello World"  # Words without the !
-        hw = HelloWorld(test)
-        self.assertEqual(hw.get_combined_string(), "Hello World!")
+        testText = "Hello World"  # Words without the !
+        hw = HelloWorld(testText)
+        self.assertEqual(hw.get_text(), testText + "!")
 
     def test_add_exclamation(self):
-        test = "Microsoft is popular"  # Words without the !
-        hw = HelloWorld(test)
-        self.assertEqual(hw.get_combined_string(), "Python!")
-
-    def test_already_has_exclamation(self):
-        test = "Hello World"  # Words without the !
-        hw = HelloWorld(test)
-        self.assertEqual(hw.get_combined_string(), "G-Code!")
+        testText = "Microsoft is popular"  # Words without the !
+        hw = HelloWorld(testText)
+        self.assertEqual(hw.get_text(), testText + "!")
 
 if __name__ == "__main__":
     unittest.main()
