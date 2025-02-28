@@ -1,6 +1,6 @@
 class HelloWorld:
     def __init__(self, text: str):
-        """Stores characters in reverse order using a different for loop approach."""
+        #Stores characters in a list
         self.char_list = []
 
         # text = text.upper()  # Convert text to uppercase
@@ -17,4 +17,4 @@ class HelloWorld:
 
 # Example usage
 hw = HelloWorld("Hello World")
-print(hw.get_combined_string())  # Output: DLROW OLLEH!
+print(hw.get_combined_string())  # Output: words with ! at the end
