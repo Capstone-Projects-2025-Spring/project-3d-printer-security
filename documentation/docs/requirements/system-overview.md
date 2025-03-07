@@ -5,15 +5,49 @@ sidebar_position: 1
 # System Overview
 
 ## Project Abstract
-The increasing accessibility of 3D printing has revolutionized manufacturing and prototyping or re-producing a part in a remote location. However, with the widespread us of printing 3D parts, there is a growing risk of maliciously altered or error-prone G-CODE files that could damage other equipment using the printed parts, or result in injury or fire. This project aims to develop an application to scan G-CODE files for potential threats or errors, ensuring safer and more reliable 3D printing. The application will analyze G-CODE files to identify issues such as out-of-bound commands, excessive temperature settings, user error, or malicious codes. It will also create a check list for the user to properly print the part with success check for bad G-CODE and suggest corrective measures. The application will flag the G-CODE if the files are un-safe, problematic, or malicious. The application will provide a summary to the user. The project’s goals include:
+The increasing accessibility of 3D printing has revolutionized manufacturing and prototyping,
+enabling the reproduction of parts in remote locations.
+However, with the widespread use of 3D printing,
+there is a growing risk of maliciously altered or error-prone G-CODE files that could damage equipment,
+result in injury, or even cause fires.
 
-- Enhancing 3D printer safety by mitigating the risks of hardware damage or accidents.
-- Streamlining the printing process by catching common errors before execution.
-- Providing a user-friendly interface for reviewing identified issues with actionable suggestions for resolution. This application has the potential to be a vital tool for 3D printing enthusiasts and professionals, ensuring higher print reliability, reduced downtime, and safer operation.
+This project aims
+to develop a **distributable plugin for OctoPrint** that scans G-CODE files for potential threats or errors,
+ensuring safer and more reliable 3D printing.
+The plugin will analyze G-CODE files to identify issues such as out-of-bounds commands,
+excessive temperature settings, user errors, or malicious code.
+It will also act as a stopping point where clients can follow best practices for successful prints
+and can learn to take corrective measures to avoid future mistakes.
+The plugin will provide a small summary to the client,
+indicating whether the file is **safe, problematic, or potentially malicious**.
+
+### Project Goals:
+- Enhance 3D printer safety by mitigating the risks of hardware damage or accidents.
+- Streamline the printing process by detecting common errors before execution.
+- Provide a user-friendly interface within **OctoPrint**, allowing users to review identified issues with actionable suggestions for resolution.
+
+This plugin will serve as a vital tool for 3D printing enthusiasts and professionals, ensuring higher print reliability, reduced downtime, and safer operation.
 
 ## Conceptual Design
-The app will be an executable program with a graphical UI. It will be launched after CURA has sliced and saved the file to the USB drive or the desired folder. The app will scan that newly created G-CODE and alert the user to halt or continue based on the scan. The application will be written in Java or Python and it will be portable and executable for windows, linux, mac etc. The design will begin with scanning the for temperature range and temperature of hot plate to turn off after printing. The other variables will check for printer model and x,y,z are within limits. We can add more features such as a checklist for the user to make sure they have followed the correct steps to complete a successful print.
+The application will be a **plugin integrated within OctoPrint**, appearing as a dedicated feature tab. It will automatically analyze G-CODE files after slicing is completed in **CURA or PRUSA** and before the print job is executed. The plugin will provide users with a dropdown menu to select the file for scanning and will generate a **Pass** or **Warnings** result before printing.
+
+### Key Features:
+- **OctoPrint Integration:** Runs as a native plugin inside OctoPrint.
+- **Automated Scanning:** Analyzes G-CODE files received via:
+    - Direct network transfer to OctoPrint.
+    - Network storage is accessible by OctoPrint.
+- **G-CODE Analysis:** The scanner will check for:
+    - **Temperature Range Validation:** Ensuring the temperature settings for the hotend and heated bed are within safe limits.
+    - **Shutdown Confirmation:** Verifying that the heated bed turns off is within guidelines.
+    - **Printer Model & Boundaries:** Ensuring the X, Y, and Z axis movements are within the printer’s limits.
+- **Checklist Feature:** Users will be provided with a **file scan report** so they can re-slice following the recommended printer guidelines.
+
+Future features and enhancements can be added to improve safety and usability.
 
 ## Background
-This document proposes a software solution that scans G-CODE files for threats to ensure safer 3D printing. The increasing accessibility of 3D printing has revolutionized manufacturing and prototyping or re-producing a part onsite. However, with the widespread of printing 3D parts, there is a growing risk of maliciously altered or error-prone G-CODE files that could damage other equipment using the printed parts, or result in injury or fire to the printer. This task aims to develop an application to scan G-CODE files for potential threats or errors, ensuring safer and more reliable 3D printing and user safety.
-The application will analyze G-CODE files to identify issues such as out-of-bound commands, excessive temperature settings, user error, or other malicious or suspicious commands. The app will check for bad G-CODE and suggest corrective measures and if required create a checklist or instructions for the user to properly print the part with success. The application will flag the G-CODE if the files are unsafe, problematic, or malicious. The application will provide a summary to the person in charge of approving the print.
+This document proposes a **plugin-based software solution for OctoPrint** that scans G-CODE files for potential threats,
+ensuring safer 3D printing.
+The accessibility of 3D printing has transformed manufacturing, prototyping, and on-site part reproduction.
+However, as 3D printing adoption increases,
+so do the risks associated with maliciously modified or erroneous G-CODE files.
+The G-Code security scanner plugin for OctoPrint will serve all typs of users in any environment. 
