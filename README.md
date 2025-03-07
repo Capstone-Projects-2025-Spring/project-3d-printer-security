@@ -74,7 +74,7 @@ https://asmedigitalcollection.asme.org/computingengineering/article-abstract/21/
 ## Recommended Resources
 
 The following resources will aid in the plugin development. 
-- OctoPrint
+- OctoPrint Plugin Documentation
 - RaspBerry PI 4
 - 3d Printer 
 - Remote vpn access to computer for working remotely to test code (Optional).
