@@ -67,7 +67,7 @@ Therefore, all agencies under this umbrella use secure networks for printing and
 2.	Future scalability to handle multiple files and print multiple jobs sent to more than one printer.
 3.	Octoprint provides documentation for creating plugins for developers to enhance or upgrade features. 
 
-More information on addressing 3D printing security.   
+Other information on addressing 3D printing security.   
 https://asmedigitalcollection.asme.org/computingengineering/article-abstract/21/4/041007/1089710/A-Blockchain-Based-G-Code-Protection-Approach-for?redirectedFrom=fulltext
 
 
