@@ -6,9 +6,7 @@
 [![Deploy Docs](https://github.com/ApplebaumIan/tu-cis-4398-docs-template/actions/workflows/deploy.yml/badge.svg)](https://github.com/ApplebaumIan/tu-cis-4398-docs-template/actions/workflows/deploy.yml)
 [![Documentation Website Link](https://img.shields.io/badge/-Documentation%20Website-brightgreen)](https://applebaumian.github.io/tu-cis-4398-docs-template/)
 
-
 </div>
-
 
 ## Authors
 
@@ -19,36 +17,38 @@ Ellie Fiera, Rafael Rodriguez, Sami Jafri, Sergiy Pliss, Shafiq Rahman, and Chri
 01-27-25 
 Verion 1.0.0
 
-
 ## Project Abstract
 
 3D Printer G-CODE Validation and Security Application
 
-The increasing accessibility of 3D printing has revolutionized manufacturing and prototyping or re-producing a part virtually anywhere.
-However, with the widespread use of printing 3D parts,
-there is a growing risk of maliciously altered or error-prone G-CODE files
-that could damage the equipment while printing a parts,
-or result in injury or fire.
+The increasing accessibility of 3D printing has revolutionized manufacturing of prototyping or re-producing a part virtually anywhere.
+However, with the widespread use of printing 3D parts, there is a growing risk of maliciously altered or error-prone G-CODE files
+that could damage the equipment, result in injury, or fire.
+
 This project aims to develop a solution to mitigate these problems by:
-1. Scan G-CODE files for potential threats or errors.
-2. Ensuring a safer and more reliable 3D printing experience.
-3. Further Scan G-CODE of files to identify issues such as out-of-bound commands.
-4. Excessive temperature settings or user errors.
-After scanning an alert or pass will allow the client to take action to halt printing depending on the result. 
-If the scan is approved, then it can be successfully printed.
-The project’s goals include:
-1.	Enhancing 3D printer safety by mitigating the risks of hardware damage by stopping malicious code from running on the 3D printer.
-2.	Streamlining the printing process and increase productivity and prevent downtime.
-3.	Providing a user-friendly interface to scan and print.
+- Scan G-CODE files for potential threats or errors.
+- Ensuring a safer and more reliable 3D printing experience.
+- Further Scan G-CODE of files to identify issues such as out-of-bound commands.
+- Incorrect temperature settings and other user errors.
+
+After scanning a g-code file, an alert with pass will allow the client to take action to halt printing depending on the scan result. 
+If the scan is approved, then it can be printed successfully.
+
+This project’s goals include:
+- Enhancing 3D printer safety by mitigating the risks of hardware damage by stopping malicious code from running on the 3D printer.
+- Streamlining the printing process and increase productivity and prevent downtime.
+- Providing a user-friendly interface to scan and print.
 This application has the potential to be a vital tool for 3D printing enthusiasts and professionals, ensuring higher print reliability, prevent downtime, and safer operation.
 
+## High-Level Requirement
 
-## High Level Requirement
+The application will provide a standard distributable plugin for OctoPrint. It will be available as a feature tab within OctoPrint and will be used after CURA or PRUSA has completed slicing a file into G-code.
 
-The application will have a frontend and backend program with the frontend graphical UI.
-It will be used after CURA / PRUSA completed slicing a file into g-code.
-The g-code file will be accessed by the frontend application with a dropdown file section
-and for backend g-code scanning process to be approved for printing.
+The G-code file can either be:
+- Sent to OctoPrint over the network, or
+- Accessed by OctoPrint via network storage.
+
+The client will be presented with a dropdown file selection interface to choose a G-code file for scanning. The scanner will analyze the file and return a **Pass** or **Warnings** status before printing.
 
 ## Conceptual Design
 
@@ -63,13 +63,12 @@ In government and military computer usage policies, USB drives for storage are h
 This makes using USB drive scanning before printing makes it impracticable.
 Therefore, all agencies under this umbrella use secure networks for printing and communication. To ensure compatibility and functionality, the G-code scanning application will have network capability.
 
-1.	Seamless integration with all networked devices where 3D printing security is in high demand.
-2.	Future scalability to handle multiple files and print multiple jobs sent to more than one printer.
-3.	Octoprint provides documentation for creating plugins for developers to enhance or upgrade features. 
+- Seamless integration with all networked devices where 3D printing security is in high demand.
+- Future scalability to handle multiple files and print multiple jobs sent to more than one printer.
+- Octoprint provides documentation for creating plugins for developers to enhance or upgrade features. 
 
 Other information on addressing 3D printing security.   
 https://asmedigitalcollection.asme.org/computingengineering/article-abstract/21/4/041007/1089710/A-Blockchain-Based-G-Code-Protection-Approach-for?redirectedFrom=fulltext
-
 
 ## Recommended Resources
 
