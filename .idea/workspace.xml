@@ -5,29 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0c8aca9-628d-436b-95b2-9b4fd0177feb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/OctoPrint-Gcode_scanner/MANIFEST.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OctoPrint-Gcode_scanner/extras/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OctoPrint-Gcode_scanner/extras/gcode_scanner.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OctoPrint-Gcode_scanner/extras/github/bug_report.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OctoPrint-Gcode_scanner/extras/github/feature_request.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OctoPrint-Gcode_scanner/octoprint_gcode_scanner/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OctoPrint-Gcode_scanner/octoprint_gcode_scanner/static/css/gcode_scanner.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OctoPrint-Gcode_scanner/octoprint_gcode_scanner/static/js/gcode_scanner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OctoPrint-Gcode_scanner/octoprint_gcode_scanner/static/less/gcode_scanner.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OctoPrint-Gcode_scanner/octoprint_gcode_scanner/templates/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OctoPrint-Gcode_scanner/octoprint_gcode_scanner/templates/gcode_scanner_tab.jinja2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OctoPrint-Gcode_scanner/setup.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OctoPrint-Gcode_scanner/translations/README.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/backend/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/OctoPrint-Gcode_scanner/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/OctoPrint-Gcode_scanner/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/backend/MANIFEST.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/backend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/OctoPrint-Gcode_scanner/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/backend/babel.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/OctoPrint-Gcode_scanner/babel.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/backend/octoprint_helloworld/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/backend/octoprint_helloworld/templates/helloworld_navbar.jinja2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/OctoPrint-Gcode_scanner/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/backend/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/OctoPrint-Gcode_scanner/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,23 +24,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "DDDP-44-Analysis---Analyze-G-Code-to-check-for-vulnerability-Shafiq",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/shaq/OneDrive - Temple University/Documents/GitHub/project-3d-printer-security",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;DDDP-44-Analysis---Analyze-G-Code-to-check-for-vulnerability-Shafiq&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/shaq/OneDrive - Temple University/Documents/GitHub/project-3d-printer-security&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\shaq\OneDrive - Temple University\Documents\GitHub\project-3d-printer-security" />
@@ -99,6 +77,7 @@
       <workItem from="1741466971591" duration="1861000" />
       <workItem from="1741534700602" duration="694000" />
       <workItem from="1741535586584" duration="304000" />
+      <workItem from="1741536472182" duration="909000" />
     </task>
     <servers />
   </component>
