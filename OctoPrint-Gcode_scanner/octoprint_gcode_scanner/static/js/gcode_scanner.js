@@ -65,6 +65,8 @@ $(function() {
             console.log("Fetching file from:", fileUrl);
 
             // Fetch G-code file
+            // Source: https://community.octoprint.org/t/uploading-file-to-octopi-through-the-api-using-javascript/3938
+            // Can use Get and Put
             $.ajax({
                 url: fileUrl,
                 type: "GET",
