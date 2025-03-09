@@ -52,7 +52,7 @@ $(function() {
         // To Do:
         // Investigate line 62
         // Investigate unused functions below to replace the Ajax.
-        
+
         self.scanGcode = function() {
             var selectedFile = $("#gcode_file_select").val();
             if (!selectedFile) {
