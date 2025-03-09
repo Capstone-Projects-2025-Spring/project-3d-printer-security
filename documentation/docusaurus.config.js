@@ -99,11 +99,6 @@ const config = {
       {
         // Plugin Options for loading OpenAPI files
         specs: [
-          {
-            id: 'using-single-yaml',
-            spec: 'static/openapi.yml.yaml',
-            route: '/api/',
-          },
         ],
         // Theme Options for modifying how redoc renders them
         theme: {

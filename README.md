@@ -57,6 +57,11 @@ OctoPrint can run on the network to receive a print job as well as provide web a
 The designed application functionality includes scanning for incorrect temperature ranges out of bound commands,
 malicious commands to disable limit switches, and including to prevent malicious code from colliding the print head into the part. The job of the software will be to stop the print job from being executed on the printer.
 
+## Frontend Functional Prototype
+
+https://www.figma.com/proto/pC3qnX4DrUOzfLVmQeg4gn/3D-Printer-Security-Prototype?node-id=3334-3397&p=f&t=CZnjBvmk7yK67zjy-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1
+The above is a functional prototype of the web UI.
+
 ## Background Summary
 
 In government and military computer usage policies, USB drives for storage are highly regulated.
