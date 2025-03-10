@@ -1,0 +1,39 @@
+# The tests will run when a PR is made to the main or develop branch
+# PR will be blocked if the tests fail
+# The tests will run on Windows
+# The tests will run using Python 3.10
+# The tests will run using PowerShell
+# The tests will run using a virtual environment
+# https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-python
+name: CI - Run Automated Tests (Windows PowerShell)
+
+on:
+  pull_request: 
+    branches:
+      - main
+      - develop
+
+jobs:
+  test:
+    runs-on: windows-latest  # Runs on Windows. I chose Windows since I don't use macOS or Linux.
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3  # Pulls your repository code
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"  # Python version to test with.
+
+      # - name: Install dependencies (PowerShell)
+      #   run: |
+      #     python -m venv venv  # Create virtual environment
+      #     .\venv\Scripts\Activate.ps1  # Activate venv in PowerShell
+      #     pip install --upgrade pip
+      #     pip install -r requirements.txt  # Install dependencies
+      #   shell: pwsh  # Runs in PowerShell
+
+      - name: Run Unit Tests (PowerShell)
+        run: |
+          python -m unittest discover tests/  # Run all tests in the "tests" folder
+        shell: pwsh  # Runs in PowerShell
