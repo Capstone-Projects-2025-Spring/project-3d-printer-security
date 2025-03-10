@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.3.2">
 <title data-rh="true">Hello from Project 3d Printer Security | Project 3d Printer Security</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://Capstone-Projects-2025-Spring.github.io/project-3d-printer-security/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="Hello from Project 3d Printer Security | Project 3d Printer Security"><meta data-rh="true" name="description" content="Description will go into a meta tag in &lt;head /&gt;"><meta data-rh="true" property="og:description" content="Description will go into a meta tag in &lt;head /&gt;"><link data-rh="true" rel="icon" href="/project-3d-printer-security/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://Capstone-Projects-2025-Spring.github.io/project-3d-printer-security/"><link data-rh="true" rel="alternate" href="https://Capstone-Projects-2025-Spring.github.io/project-3d-printer-security/" hreflang="en"><link data-rh="true" rel="alternate" href="https://Capstone-Projects-2025-Spring.github.io/project-3d-printer-security/" hreflang="x-default"><script data-rh="true">function insertBanner(){var n=document.createElement("div");n.id="__docusaurus-base-url-issue-banner-container";n.innerHTML='\n<div id="__docusaurus-base-url-issue-banner" style="border: thick solid red; background-color: rgb(255, 230, 179); margin: 20px; padding: 20px; font-size: 20px;">\n   <p style="font-weight: bold; font-size: 30px;">Your Docusaurus site did not load properly.</p>\n   <p>A very common reason is a wrong site <a href="https://docusaurus.io/docs/docusaurus.config.js/#baseUrl" style="font-weight: bold;">baseUrl configuration</a>.</p>\n   <p>Current configured baseUrl = <span style="font-weight: bold; color: red;">/project-3d-printer-security/</span> </p>\n   <p>We suggest trying baseUrl = <span id="__docusaurus-base-url-issue-banner-suggestion-container" style="font-weight: bold; color: green;"></span></p>\n</div>\n',document.body.prepend(n);var e=document.getElementById("__docusaurus-base-url-issue-banner-suggestion-container"),s=window.location.pathname,r="/"===s.substr(-1)?s:s+"/";e.innerHTML=r}document.addEventListener("DOMContentLoaded",(function(){void 0===window.docusaurus&&insertBanner()}))</script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><link rel="stylesheet" href="/project-3d-printer-security/assets/css/styles.39169b37.css">
-<script src="/project-3d-printer-security/assets/js/runtime~main.2362bfc6.js" defer="defer"></script>
+<script src="/project-3d-printer-security/assets/js/runtime~main.ac1b1bb1.js" defer="defer"></script>
 <script src="/project-3d-printer-security/assets/js/main.bc5bacca.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -19,62 +19,62 @@
 Verion 1.0.0</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="project-abstract">Project Abstract<a href="#project-abstract" class="hash-link" aria-label="Direct link to Project Abstract" title="Direct link to Project Abstract">​</a></h2>
 <p>3D Printer G-CODE Validation and Security Application</p>
-<p>The increasing accessibility of 3D printing has revolutionized manufacturing and prototyping or re-producing a part in a remote location.
-However, with the widespread use of printing 3D parts,
-there is a growing risk of maliciously altered or error-prone G-CODE files
-that could damage the equipment while printing a parts,
-or result in injury or fire.
-This project aims to develop an application to scan G-CODE files for potential threats or errors,
-ensuring safer and more reliable 3D printing.
-The application will analyze G-CODE files to identify issues such as out-of-bound commands,
-excessive temperature settings, user error, or malicious codes.
-It will also create an alert for the client to take proper action to remediate
-and then successfully print the part with success check for bad G-CODE and suggest corrective measures.
-The application will flag the G-CODE if the files are error-prone, or malicious.
-The application will provide a summary to the client via the front end application.
-The project’s goals include:</p>
-<ol>
-<li>Enhancing 3D printer safety by mitigating the risks of hardware damage or prevent or stop malicious code from running on the 3D printer.</li>
-<li>Streamlining the printing process by catching common errors before execution will increase productivity and prevent downtime.</li>
-<li>Providing a user-friendly interface for reviewing identified issues with actionable suggestions for resolution.
+<p>The increasing accessibility of 3D printing has revolutionized manufacturing of prototyping or re-producing a part virtually anywhere.
+However, with the widespread use of printing 3D parts, there is a growing risk of maliciously altered or error-prone G-CODE files
+that could damage the equipment, result in injury, or fire.</p>
+<p>This project aims to develop a solution to mitigate these problems by:</p>
+<ul>
+<li>Scan G-CODE files for potential threats or errors.</li>
+<li>Ensuring a safer and more reliable 3D printing experience.</li>
+<li>Further Scan G-CODE of files to identify issues such as out-of-bound commands.</li>
+<li>Incorrect temperature settings and other user errors.</li>
+</ul>
+<p>After scanning a g-code file, an alert with pass will allow the client to take action to halt printing depending on the scan result.
+If the scan is approved, then it can be printed successfully.</p>
+<p>This project’s goals include:</p>
+<ul>
+<li>Enhancing 3D printer safety by mitigating the risks of hardware damage by stopping malicious code from running on the 3D printer.</li>
+<li>Streamlining the printing process and increase productivity and prevent downtime.</li>
+<li>Providing a user-friendly interface to scan and print.
 This application has the potential to be a vital tool for 3D printing enthusiasts and professionals, ensuring higher print reliability, prevent downtime, and safer operation.</li>
-</ol>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="high-level-requirement">High Level Requirement<a href="#high-level-requirement" class="hash-link" aria-label="Direct link to High Level Requirement" title="Direct link to High Level Requirement">​</a></h2>
-<p>The application will have a frontend and backend program with the frontend graphical UI.
-It will be used after CURA completed slicing a file into g-code.
-The g-code file will be accessed by the frontend application
-and sent to the backend g-code scanning application to be submitted for printing.
-The backend application will scan that newly created G-CODE and alert the user to halt or continue based on the scan.</p>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="high-level-requirement">High-Level Requirement<a href="#high-level-requirement" class="hash-link" aria-label="Direct link to High-Level Requirement" title="Direct link to High-Level Requirement">​</a></h2>
+<p>The application will provide a standard distributable plugin for OctoPrint. It will be available as a feature tab within OctoPrint and will be used after CURA or PRUSA has completed slicing a file into G-code.</p>
+<p>The G-code file can either be:</p>
+<ul>
+<li>Sent to OctoPrint over the network, or</li>
+<li>Accessed by OctoPrint via network storage.</li>
+</ul>
+<p>The client will be presented with a dropdown file selection interface to choose a G-code file for scanning. The scanner will analyze the file and return a <strong>Pass</strong> or <strong>Warnings</strong> status before printing.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="conceptual-design">Conceptual Design<a href="#conceptual-design" class="hash-link" aria-label="Direct link to Conceptual Design" title="Direct link to Conceptual Design">​</a></h2>
-<p>The application facets will be developed by our front end team and backend team.
-It will be compatible for devices running on any modern network.
+<p>The team will develop the application as a plugin for OctoPrint.
+OctoPrint can run on the network to receive a print job as well as provide web access to scan the file before printing.
 The designed application functionality includes scanning for incorrect temperature ranges out of bound commands,
-unnecessary commands to disable limit switches,
-and including to prevent malicious code from colliding the print head into the part. The job of the software will be to stop the print job from being executed on the printer.</p>
+malicious commands to disable limit switches, and including to prevent malicious code from colliding the print head into the part. The job of the software will be to stop the print job from being executed on the printer.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="frontend-functional-prototype">Frontend Functional Prototype<a href="#frontend-functional-prototype" class="hash-link" aria-label="Direct link to Frontend Functional Prototype" title="Direct link to Frontend Functional Prototype">​</a></h2>
 <p><a href="https://www.figma.com/proto/pC3qnX4DrUOzfLVmQeg4gn/3D-Printer-Security-Prototype?node-id=3334-3397&amp;p=f&amp;t=CZnjBvmk7yK67zjy-0&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=0%3A1" target="_blank" rel="noopener noreferrer">https://www.figma.com/proto/pC3qnX4DrUOzfLVmQeg4gn/3D-Printer-Security-Prototype?node-id=3334-3397&amp;p=f&amp;t=CZnjBvmk7yK67zjy-0&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=0%3A1</a>
 The above is a functional prototype of the web UI.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="background-summary">Background Summary<a href="#background-summary" class="hash-link" aria-label="Direct link to Background Summary" title="Direct link to Background Summary">​</a></h2>
 <p>In government and military computer usage policies, USB drives for storage are highly regulated.
 This makes using USB drive scanning before printing makes it impracticable.
-Therefore, all agencies under this umbrella use secure networks for printing and communication. To ensure compaitbility and functionality the G-code scanning application will have network capability.</p>
-<ol>
+Therefore, all agencies under this umbrella use secure networks for printing and communication. To ensure compatibility and functionality, the G-code scanning application will have network capability.</p>
+<ul>
 <li>Seamless integration with all networked devices where 3D printing security is in high demand.</li>
 <li>Future scalability to handle multiple files and print multiple jobs sent to more than one printer.</li>
-<li>Ability of additions for new features, without major architectural changes.</li>
-</ol>
-<p>See the following link for more informaiton on how others are addressing 3D printing security.<br>
+<li>Octoprint provides documentation for creating plugins for developers to enhance or upgrade features.</li>
+</ul>
+<p>Other information on addressing 3D printing security.<br>
 <a href="https://asmedigitalcollection.asme.org/computingengineering/article-abstract/21/4/041007/1089710/A-Blockchain-Based-G-Code-Protection-Approach-for?redirectedFrom=fulltext" target="_blank" rel="noopener noreferrer">https://asmedigitalcollection.asme.org/computingengineering/article-abstract/21/4/041007/1089710/A-Blockchain-Based-G-Code-Protection-Approach-for?redirectedFrom=fulltext</a></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="required-resources">Required Resources<a href="#required-resources" class="hash-link" aria-label="Direct link to Required Resources" title="Direct link to Required Resources">​</a></h2>
-<p>This project will require the following resources.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="recommended-resources">Recommended Resources<a href="#recommended-resources" class="hash-link" aria-label="Direct link to Recommended Resources" title="Direct link to Recommended Resources">​</a></h2>
+<p>The following resources will aid in the plugin development.</p>
 <ul>
+<li>OctoPrint Plugin Documentation</li>
+<li>RaspBerry PI 4</li>
 <li>3d Printer</li>
-<li>Raspberry Pie</li>
-<li>Dedicated Temple provided computer</li>
-<li>Remote vpn access to computer for working remotely to test code.</li>
-<li>A camera pointed at the 3d Printer for remote testing.</li>
+<li>Remote vpn access to computer for working remotely to test code (Optional).</li>
+<li>A camera pointed at the 3d Printer for remote testing (Optional).</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="collaborators">Collaborators<a href="#collaborators" class="hash-link" aria-label="Direct link to Collaborators" title="Direct link to Collaborators">​</a></h2>
-<table><tr><td align="center"><a href="https://github.com/ApplebaumIan"><img src="https://avatars.githubusercontent.com/u/9451941?v=4" width="100;" alt="ApplebaumIan"><br><sub><b>Ian Tyler Applebaum</b></sub></a></td><td align="center"><a href="https://github.com/leighflagg"><img src="https://avatars.githubusercontent.com/u/77810293?v=4" width="100;" alt="leighflagg"><br><sub><b>Null</b></sub></a></td><td align="center"><a href="https://github.com/leighflagg"><img src="https://avatars.githubusercontent.com/shafiq9018" width="100;" alt="leighflagg"><br><sub><b>Shafiq Rahman</b></sub></a></td><td align="center"><a href="https://github.com/leighflagg"><img src="https://avatars.githubusercontent.com/efiera" width="100;" alt="leighflagg"><br><sub><b>Ellie Fiera</b></sub></a></td><td align="center"><a href="https://github.com/leighflagg"><img src="https://avatars.githubusercontent.com/RRodriguez26" width="100;" alt="leighflagg"><br><sub><b>Rafael Perez</b></sub></a></td><td align="center"><a href="https://github.com/leighflagg"><img src="https://avatars.githubusercontent.com/Stapletonchris" width="100;" alt="leighflagg"><br><sub><b>Christopher Luckie Christmas</b></sub></a></td><td align="center"><a href="https://github.com/leighflagg"><img src="https://avatars.githubusercontent.com/sh-jafri" width="100;" alt="leighflagg"><br><sub><b>Sami Jafri</b></sub></a></td><td align="center"><a href="https://github.com/leighflagg"><img src="https://avatars.githubusercontent.com/sergiyPliss" width="100;" alt="leighflagg"><br><sub><b>Sergiy Pliss</b></sub></a></td></tr></table></div></main></div><footer class="footer"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/project-3d-printer-security/docs/intro">Documentation</a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Capstone-Projects-2025-Spring/project-3d-printer-security" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="margin-bottom--sm"><img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Temple_T_logo.svg" alt="My Site Logo" class="footer__logo themedComponent_mlkZ themedComponent--light_NVdE"><img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Temple_T_logo.svg" alt="My Site Logo" class="footer__logo themedComponent_mlkZ themedComponent--dark_xIcU"></div><div class="footer__copyright">Copyright © 2025 Project 3d Printer Security, Inc. Built with Docusaurus.</div></div></div></footer></div>
+<table><tr><td align="center"><a href="https://github.com/ApplebaumIan"><img src="https://avatars.githubusercontent.com/u/9451941?v=4" width="100;" alt="ApplebaumIan"><br><sub><b>Ian Tyler Applebaum</b></sub></a></td><td align="center"><a href="https://github.com/leighflagg"><img src="https://avatars.githubusercontent.com/u/77810293?v=4" width="100;" alt="leighflagg"><br><sub><b>Null</b></sub></a></td><td align="center"><a href="https://github.com/shafiq9018"><img src="https://avatars.githubusercontent.com/shafiq9018" width="100;" alt="shafiq9018"><br><sub><b>Shafiq Rahman</b></sub></a></td><td align="center"><a href="https://github.com/efiera"><img src="https://avatars.githubusercontent.com/efiera" width="100;" alt="efiera"><br><sub><b>Ellie Fiera</b></sub></a></td><td align="center"><a href="https://github.com/RRodriguez26"><img src="https://avatars.githubusercontent.com/RRodriguez26" width="100;" alt="RRodriguez26"><br><sub><b>Rafael Perez</b></sub></a></td><td align="center"><a href="https://github.com/Stapletonchris"><img src="https://avatars.githubusercontent.com/Stapletonchris" width="100;" alt="Stapletonchris"><br><sub><b>Christopher Luckie Christmas</b></sub></a></td><td align="center"><a href="https://github.com/sh-jafri"><img src="https://avatars.githubusercontent.com/sh-jafri" width="100;" alt="sh-jafri"><br><sub><b>Sami Jafri</b></sub></a></td><td align="center"><a href="https://github.com/sergiyPliss"><img src="https://avatars.githubusercontent.com/sergiyPliss" width="100;" alt="sergiyPliss"><br><sub><b>Sergiy Pliss</b></sub></a></td></tr></table></div></main></div><footer class="footer"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/project-3d-printer-security/docs/intro">Documentation</a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Capstone-Projects-2025-Spring/project-3d-printer-security" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="margin-bottom--sm"><img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Temple_T_logo.svg" alt="My Site Logo" class="footer__logo themedComponent_mlkZ themedComponent--light_NVdE"><img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Temple_T_logo.svg" alt="My Site Logo" class="footer__logo themedComponent_mlkZ themedComponent--dark_xIcU"></div><div class="footer__copyright">Copyright © 2025 Project 3d Printer Security, Inc. Built with Docusaurus.</div></div></div></footer></div>
 </body>
 </html>
