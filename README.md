@@ -59,8 +59,7 @@ malicious commands to disable limit switches, and including to prevent malicious
 
 ## Frontend Functional Prototype
 
-https://www.figma.com/proto/pC3qnX4DrUOzfLVmQeg4gn/3D-Printer-Security-Prototype?node-id=3334-3397&p=f&t=CZnjBvmk7yK67zjy-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1
-The above is a functional prototype of the web UI.
+[Click here to view a functional prototype of the plugin UI.](https://www.figma.com/proto/pC3qnX4DrUOzfLVmQeg4gn/3D-Printer-Security-Prototype?node-id=3334-3397&p=f&t=CZnjBvmk7yK67zjy-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1)
 
 ## Background Summary
 
