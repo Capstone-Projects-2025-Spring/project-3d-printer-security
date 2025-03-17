@@ -1,0 +1,10 @@
+#gcode_file_select {
+    display: inline-block !important;
+    width: auto !important;
+    min-width: 250px;
+}
+
+#scan_gcode_button {
+    display: inline-block !important;
+    margin-left: 10px;
+}

@@ -1,4 +1,0 @@
-include README.md
-recursive-include octoprint_helloworld/templates *
-recursive-include octoprint_helloworld/translations *
-recursive-include octoprint_helloworld/static *
