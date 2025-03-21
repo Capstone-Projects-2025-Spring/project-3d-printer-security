@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
     function GcodeScannerViewModel(parameters) {
         var self = this;
         self.filesViewModel = parameters[0];  // Get OctoPrint's file manager
@@ -7,7 +7,7 @@ $(function() {
         var _selectedFileName; // Will hold the selected file name
 
 
-        self.populateDropdown = function() {
+        self.populateDropdown = function () {
             var dropdown = $("#gcode_file_select");
             dropdown.empty();
             dropdown.append('<option value="">-- Choose a file --</option>');
@@ -53,7 +53,7 @@ $(function() {
         // Investigate line 62
         // Investigate unused functions below to replace the Ajax.
 
-        self.scanGcode = function() {
+        self.scanGcode = function () {
             var selectedFile = $("#gcode_file_select").val();
             if (!selectedFile) {
                 console.log("No file selected.");
@@ -71,20 +71,20 @@ $(function() {
                 url: fileUrl,
                 type: "GET",
                 dataType: "text",
-                success: function(data) {
+                success: function (data) {
                     console.log("G-code file loaded successfully.");
                     console.log("First 10 lines:\n", data.split("\n").slice(0, 10).join("\n"));
 
                     // Call the process function to scan for G28 commands
                     self.processGcode(data);
                 },
-                error: function(xhr) {
+                error: function (xhr) {
                     console.log("Failed to fetch G-code file: " + xhr.responseText);
                 }
             });
         };
 
-        self.processGcode = function(gcodeContent) {
+        self.processGcode = function (gcodeContent) {
             console.log("Scanning G-code content...");
 
             var detectedIssues = [];
@@ -94,24 +94,29 @@ $(function() {
             // Scan for unsafe commands
             // We are using g28 for testing purposes
             gcodeLines.forEach((line, index) => {
-                if (line.includes("G28")) {  // Using G28 as a test
-                    detectedIssues.push(`⚠️ Warning: G28 found on Line ${index + 1}: ${line}`);
-                }else if(line.includes("M20")) {  // Using M20 as a test
+                if (line.includes("M20")) {  // Using M20 as a test
                     detectedIssues.push(`⚠️ Warning: M20 found on Line ${index + 1}: ${line}`);
-                }else if (line.includes("M81")) {  // Using M81 as a test
+                } else if (line.includes("M81")) {  // Using M81 as a test
                     detectedIssues.push(`⚠️ Warning: M81 found on Line ${index + 1}: ${line}`);
-                }else if (line.includes("M109")) {  // Using M109 as a test
+                } else if (line.includes("M109")) {  // Using M109 as a test
                     detectedIssues.push(`⚠️ Warning: M109 found on Line ${index + 1}: ${line}`);
-                }else if(line.includes("M107")) {  // Using M107 as a test
+                } else if (line.includes("M107")) {  // Using M107 as a test
                     detectedIssues.push(`⚠️ Warning: M107 found on Line ${index + 1}: ${line}`);
-                }else if(line.includes("M104")) {  // Using M104 as a test
+                } else if (line.includes("M104")) {  // Using M104 as a test
                     detectedIssues.push(`⚠️ Warning: M104 found on Line ${index + 1}: ${line}`);
-                }else if(line.includes("M112")) {  // Using M112 as a test
+                } else if (line.includes("M112")) {  // Using M112 as a test
                     detectedIssues.push(`⚠️ Warning: M112 found on Line ${index + 1}: ${line}`);
-                }else if(line.includes("M410")) {  // Using M410 as a test
+                } else if (line.includes("M410")) {  // Using M410 as a test
                     detectedIssues.push(`⚠️ Warning: M410 found on Line ${index + 1}: ${line}`);
-                }else if(line.includes("M22")) {  // Using M22 as a test
+                } else if (line.includes("M22")) {  // Using M22 as a test
                     detectedIssues.push(`⚠️ Warning: M22 found on Line ${index + 1}: ${line}`);
+                    // G Part of the file ------------------------------------------------------
+                } else if (line.includes("G28")) {
+                    detectedIssues.push(`⚠️ Warning: G28 found on Line ${index + 1}: ${line}`);
+                } else if (line.includes("G31")) {
+                    detectedIssues.push(`⚠️ Warning: G31 found on Line ${index + 1}: ${line}`);
+                } else if (line.includes("G32")) {
+                    detectedIssues.push(`⚠️ Warning: G32 found on Line ${index + 1}: ${line}`);
                 }
             });
 
