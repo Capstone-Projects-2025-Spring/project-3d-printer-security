@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # System Architecture / Logical Structure #
 
-![img_2.png](images/img_2.png)
+![img_2.png](images/logicalStruc.png)
 Diagram A
 
 
