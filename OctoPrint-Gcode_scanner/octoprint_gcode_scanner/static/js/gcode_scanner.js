@@ -111,12 +111,23 @@ $(function () {
                 } else if (line.includes("M22")) {  // Using M22 as a test
                     detectedIssues.push(`⚠️ Warning: M22 found on Line ${index + 1}: ${line}`);
                     // G Part of the file ------------------------------------------------------
-                } else if (line.includes("G28")) {
+                } else if (line.includes("G12")) { // Clean nozzles
+                    detectedIssues.push(`⚠️ Warning: G12 found on Line ${index + 1}: ${line}`);
+                } else if (line.includes("G28")) { // "Homing" Procedures, requires BEFORE G29 and M48, by default this disables bed leveling before M420 S to turn leveling on
                     detectedIssues.push(`⚠️ Warning: G28 found on Line ${index + 1}: ${line}`);
-                } else if (line.includes("G31")) {
-                    detectedIssues.push(`⚠️ Warning: G31 found on Line ${index + 1}: ${line}`);
-                } else if (line.includes("G32")) {
-                    detectedIssues.push(`⚠️ Warning: G32 found on Line ${index + 1}: ${line}`);
+                } else if (line.includes("G33")) {
+                    // Delta Auto Calibration, it does:
+                    // Probe a circular grid of points
+                    // Calibrate endstops
+                    // Calibrate Delta Radius
+                    // Calibrate Tower Angles
+                    detectedIssues.push(`⚠️ Warning: G33 found on Line ${index + 1}: ${line}`);
+                } else if (line.includes("G35")) { // Tramming Assistant: interactive procedure to help you adjust the bed corners
+                    detectedIssues.push(`⚠️ Warning: G35 found on Line ${index + 1}: ${line}`);
+                } else if (line.includes("G61")) { // Return to Saved Position: 
+                    detectedIssues.push(`⚠️ Warning: G61 found on Line ${index + 1}: ${line}`);
+                } else if (line.includes("G76")) { // Probe Temperature Calibration: Only heats up the bed, not the hotend.
+                    detectedIssues.push(`⚠️ Warning: G76 found on Line ${index + 1}: ${line}`);
                 }
             });
 
