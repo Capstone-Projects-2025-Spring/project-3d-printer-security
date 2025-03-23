@@ -95,23 +95,23 @@ $(function() {
             // We are using g28 for testing purposes
             gcodeLines.forEach((line, index) => {
                 if (line.includes("G28")) {  // Using G28 as a test
-                    detectedIssues.push(`⚠️ Warning: G28 found on Line ${index + 1}: ${line}`);
-                }else if(line.includes("M20")) {  // Using M20 as a test
-                    detectedIssues.push(`⚠️ Warning: M20 found on Line ${index + 1}: ${line}`);
-                }else if (line.includes("M81")) {  // Using M81 as a test
-                    detectedIssues.push(`⚠️ Warning: M81 found on Line ${index + 1}: ${line}`);
+                    detectedIssues.push(`⚠️ Warning: G28 (autohome) found on Line ${index + 1}: ${line}`);
+                }else if(line.includes("M18")) {  // G28 - Homes all axes
+                    detectedIssues.push(`⚠️ Warning: M18 (disable steppers) found on Line ${index + 1}: ${line}`);
+                }else if (line.includes("M81")) {  // M18 -
+                    detectedIssues.push(`⚠️ Warning: M81 (power off command) found on Line ${index + 1}: ${line}`);
                 }else if (line.includes("M109")) {  // Using M109 as a test
-                    detectedIssues.push(`⚠️ Warning: M109 found on Line ${index + 1}: ${line}`);
+                    detectedIssues.push(`⚠️ Warning: M109 (found on Line ${index + 1}: ${line}`);
                 }else if(line.includes("M107")) {  // Using M107 as a test
-                    detectedIssues.push(`⚠️ Warning: M107 found on Line ${index + 1}: ${line}`);
+                    detectedIssues.push(`⚠️ Warning: M107 (fan off) found on Line ${index + 1}: ${line}`);
                 }else if(line.includes("M104")) {  // Using M104 as a test
-                    detectedIssues.push(`⚠️ Warning: M104 found on Line ${index + 1}: ${line}`);
+                    detectedIssues.push(`⚠️ Warning: M104 (change hot end temp) found on Line ${index + 1}: ${line}`);
                 }else if(line.includes("M112")) {  // Using M112 as a test
-                    detectedIssues.push(`⚠️ Warning: M112 found on Line ${index + 1}: ${line}`);
+                    detectedIssues.push(`⚠️ Warning: M112 (full shutdown) found on Line ${index + 1}: ${line}`);
                 }else if(line.includes("M410")) {  // Using M410 as a test
-                    detectedIssues.push(`⚠️ Warning: M410 found on Line ${index + 1}: ${line}`);
+                    detectedIssues.push(`⚠️ Warning: M410 (quickstop) found on Line ${index + 1}: ${line}`);
                 }else if(line.includes("M22")) {  // Using M22 as a test
-                    detectedIssues.push(`⚠️ Warning: M22 found on Line ${index + 1}: ${line}`);
+                    detectedIssues.push(`⚠️ Warning: M22 (release sd card) found on Line ${index + 1}: ${line}`);
                 }
             });
 
