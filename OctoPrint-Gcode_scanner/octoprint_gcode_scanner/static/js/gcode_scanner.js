@@ -94,40 +94,40 @@ $(function () {
             // Scan for unsafe commands
             // We are using g28 for testing purposes
             gcodeLines.forEach((line, index) => {
-                if (line.includes("M20")) {  // Using M20 as a test
+                if (line.includes("M20")) {  // Using M20 (List SD card)
                     detectedIssues.push(`⚠️ Warning: M20 found on Line ${index + 1}: ${line}`);
-                } else if (line.includes("M81")) {  // Using M81 as a test
+                } else if (line.includes("M81")) {  // Using M81 (Power Off)
                     detectedIssues.push(`⚠️ Warning: M81 found on Line ${index + 1}: ${line}`);
-                } else if (line.includes("M109")) {  // Using M109 as a test
+                } else if (line.includes("M109")) {  // Using (Wait for Hotend Temperature)
                     detectedIssues.push(`⚠️ Warning: M109 found on Line ${index + 1}: ${line}`);
-                } else if (line.includes("M107")) {  // Using M107 as a test
+                } else if (line.includes("M107")) {  // Using M107 (Fan Off)
                     detectedIssues.push(`⚠️ Warning: M107 found on Line ${index + 1}: ${line}`);
-                } else if (line.includes("M104")) {  // Using M104 as a test
+                } else if (line.includes("M104")) {  // Using M104 (Set Hotend Temperature)
                     detectedIssues.push(`⚠️ Warning: M104 found on Line ${index + 1}: ${line}`);
-                } else if (line.includes("M112")) {  // Using M112 as a test
+                } else if (line.includes("M112")) {  // Using M112 (Full Shutdown)
                     detectedIssues.push(`⚠️ Warning: M112 found on Line ${index + 1}: ${line}`);
-                } else if (line.includes("M410")) {  // Using M410 as a test
+                } else if (line.includes("M410")) {  // Using M410 (Quickstop)
                     detectedIssues.push(`⚠️ Warning: M410 found on Line ${index + 1}: ${line}`);
-                } else if (line.includes("M22")) {  // Using M22 as a test
+                } else if (line.includes("M22")) {  // Using M22 (Release SD Cards)
                     detectedIssues.push(`⚠️ Warning: M22 found on Line ${index + 1}: ${line}`);
                     // G Part of the file ------------------------------------------------------
                 } else if (line.includes("G12")) { // Clean nozzles
-                    detectedIssues.push(`⚠️ Warning: G12 found on Line ${index + 1}: ${line}`);
+                    detectedIssues.push(`⚠️ Warning: G12 (Clean nozzles) found on Line ${index + 1}: ${line}`);
                 } else if (line.includes("G28")) { // "Homing" Procedures, requires BEFORE G29 and M48, by default this disables bed leveling before M420 S to turn leveling on
-                    detectedIssues.push(`⚠️ Warning: G28 found on Line ${index + 1}: ${line}`);
+                    detectedIssues.push(`⚠️ Warning: G28 (Homing Procedure) found on Line ${index + 1}: ${line}`);
                 } else if (line.includes("G33")) {
                     // Delta Auto Calibration, it does:
                     // Probe a circular grid of points
                     // Calibrate endstops
                     // Calibrate Delta Radius
                     // Calibrate Tower Angles
-                    detectedIssues.push(`⚠️ Warning: G33 found on Line ${index + 1}: ${line}`);
+                    detectedIssues.push(`⚠️ Warning: G33 (Delta Auto Calibration) found on Line ${index + 1}: ${line}`);
                 } else if (line.includes("G35")) { // Tramming Assistant: interactive procedure to help you adjust the bed corners
-                    detectedIssues.push(`⚠️ Warning: G35 found on Line ${index + 1}: ${line}`);
+                    detectedIssues.push(`⚠️ Warning: G35 (Tramming Assistant) found on Line ${index + 1}: ${line}`);
                 } else if (line.includes("G61")) { // Return to Saved Position: 
-                    detectedIssues.push(`⚠️ Warning: G61 found on Line ${index + 1}: ${line}`);
+                    detectedIssues.push(`⚠️ Warning: G61 (Returning Saved Position) found on Line ${index + 1}: ${line}`);
                 } else if (line.includes("G76")) { // Probe Temperature Calibration: Only heats up the bed, not the hotend.
-                    detectedIssues.push(`⚠️ Warning: G76 found on Line ${index + 1}: ${line}`);
+                    detectedIssues.push(`⚠️ Warning: G76 (Probe Temperature Calibration) found on Line ${index + 1}: ${line}`);
                 }
             });
 
