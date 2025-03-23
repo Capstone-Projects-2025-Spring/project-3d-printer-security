@@ -3,23 +3,27 @@ sidebar_position: 4
 ---
 
 # Features and Requirements
+
 ## Functional Requirements
-- Executable must run in background
--Executable must scan pre sliced 3d model for:
-	-Malicious code
-	-Corrupt sections 
--Executable must scan Cura generated g-code for:
-- intersections in paths along all axes. 
-- spikes in temperature of the print head.
-- an excessive volume of filament.
--Executable file must have an associated configuration file that may be used to edit:
-	-Maximum permitted filament.
+- The distributable plugin must run in OctoPrint.
+- The executable must scan pre-sliced 3D models for:
+	- Malicious code
+	- Corrupt sections
+- The plugin must scan **Cura-generated G-code** or **Prusa-generated G-code** for:
+	- Crossing boundaries along all axes.
+	- Spikes in temperature of the print head.
+    - Spikes in temperature of the bed.
+- The distributable plugin file must have an associated **source code** that allows editing of:
+	- Maximum permitted filament usage.
 	- Maximum temperature of the print head.
--There must be an additional executable file for the purpose of easily editing the configuration file.
--Executable must raise a flag on detection of suspicious g-code and ask for manual approval. 
+- The plugin must **raise a flag** upon detection of suspicious G-code and require **manual approval** before proceeding.
 
 ## Nonfunctional Requirements
-- Security program must exist in the form of an executable file.
--Executable must not impede normal function of its resident computer system. 
--Executable must launch directly from file, without additional input.
- -Executable must automatically detect files sent to and output by Cura.
+- The security scan program should be in the form of a distributable **OctoPrint Plugin**.
+- The plugin should **not impede** the normal function of its resident computer system.
+- The plugin should launch **directly in OctoPrint** without any additional user input.
+- The plugin should **scan and detect** errors after gcode output by Cura or Prusa.
+
+---
+
+This document defines the essential features and requirements for the **3D Printer Security** project, ensuring that scanned G-code files remain safe for use.

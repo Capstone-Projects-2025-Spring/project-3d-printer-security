@@ -1,7 +1,7 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=17857619)
 <div align="center">
 
-# 3D Printer Security 
+# 3D Printer Security
 [![Report Issue on Jira](https://img.shields.io/badge/Report%20Issues-Jira-0052CC?style=flat&logo=jira-software)](https://temple-cis-projects-in-cs.atlassian.net/jira/software/c/projects/DT/issues)
 [![Deploy Docs](https://github.com/ApplebaumIan/tu-cis-4398-docs-template/actions/workflows/deploy.yml/badge.svg)](https://github.com/ApplebaumIan/tu-cis-4398-docs-template/actions/workflows/deploy.yml)
 [![Documentation Website Link](https://img.shields.io/badge/-Documentation%20Website-brightgreen)](https://applebaumian.github.io/tu-cis-4398-docs-template/)
@@ -14,7 +14,7 @@ Ellie Fiera, Rafael Rodriguez, Sami Jafri, Sergiy Pliss, Shafiq Rahman, and Chri
 
 ## Release Date
 
-01-27-25 
+01-27-25
 Verion 1.0.0
 
 ## Project Abstract
@@ -31,14 +31,14 @@ This project aims to develop a solution to mitigate these problems by:
 - Further Scan G-CODE of files to identify issues such as out-of-bound commands.
 - Incorrect temperature settings and other user errors.
 
-After scanning a g-code file, an alert with pass will allow the client to take action to halt printing depending on the scan result. 
+After scanning a g-code file, an alert with pass will allow the client to take action to halt printing depending on the scan result.
 If the scan is approved, then it can be printed successfully.
 
 This project’s goals include:
 - Enhancing 3D printer safety by mitigating the risks of hardware damage by stopping malicious code from running on the 3D printer.
 - Streamlining the printing process and increase productivity and prevent downtime.
 - Providing a user-friendly interface to scan and print.
-This application has the potential to be a vital tool for 3D printing enthusiasts and professionals, ensuring higher print reliability, prevent downtime, and safer operation.
+  This application has the potential to be a vital tool for 3D printing enthusiasts and professionals, ensuring higher print reliability, prevent downtime, and safer operation.
 
 ## High-Level Requirement
 
@@ -53,7 +53,7 @@ The client will be presented with a dropdown file selection interface to choose 
 ## Conceptual Design
 
 The team will develop the application as a plugin for OctoPrint.
-OctoPrint can run on the network to receive a print job as well as provide web access to scan the file before printing. 
+OctoPrint can run on the network to receive a print job as well as provide web access to scan the file before printing.
 The designed application functionality includes scanning for incorrect temperature ranges out of bound commands,
 malicious commands to disable limit switches, and including to prevent malicious code from colliding the print head into the part. The job of the software will be to stop the print job from being executed on the printer.
 
