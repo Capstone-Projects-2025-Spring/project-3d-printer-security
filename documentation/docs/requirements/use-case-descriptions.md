@@ -195,6 +195,7 @@ sequenceDiagram
   deactivate Module
   deactivate HomePage
 ```
+
 - _As a Navy member, I would like to submit a new module in which it adds new way of scanning._
 
   - On the main page, user clicks "Add new module" into a box with a plus icon.
