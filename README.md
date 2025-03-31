@@ -74,13 +74,19 @@ Therefore, all agencies under this umbrella use secure networks for printing and
 Other information on addressing 3D printing security.   
 https://asmedigitalcollection.asme.org/computingengineering/article-abstract/21/4/041007/1089710/A-Blockchain-Based-G-Code-Protection-Approach-for?redirectedFrom=fulltext
 
+## Deployment Instructions
+Mac  - Download Rasberry Pi OS to your Mac, run the program, select "Choose OS", navigate to the "other specific OS option", then 3D printing, OctoPi is one of the first results, and select the preferred release and storage device (SD card). Insert in the Raspberry Pi, and after launching, set up an Admin account and go to the plugins menu within settings. From here you can install the scanner plugin from the repository link, https://github.com/Capstone-Projects-2025-Spring/project-3d-printer-security.git 
+
+You then connect the Pi to the 3D printer via a hardline connection, then on your Mac connect via the IP address of the Raspberry Pi or by octopi.local in your preferred web browser, and are now able to scan and print
+
 ## Recommended Resources
 
 The following resources will aid in the plugin development. 
 - OctoPrint Plugin Documentation
-- RaspBerry PI 4
+- Raspberry PI 4
 - 3d Printer 
-- Remote vpn access to computer for working remotely to test code (Optional).
+- Remote VPN access to the computer for working remotely to test code (Optional).
+- SD Card
 - A camera pointed at the 3d Printer for remote testing (Optional).
 
 ## Collaborators
