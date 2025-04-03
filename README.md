@@ -75,7 +75,7 @@ Other information on addressing 3D printing security.
 https://asmedigitalcollection.asme.org/computingengineering/article-abstract/21/4/041007/1089710/A-Blockchain-Based-G-Code-Protection-Approach-for?redirectedFrom=fulltext
 
 ## Deployment Instructions
-###Mac  
+### Mac  
   1) Download Rasberry Pi OS to your Mac
   2) Run the program
   3) Select "Choose OS"
