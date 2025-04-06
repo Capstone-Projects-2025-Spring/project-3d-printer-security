@@ -1,0 +1,27 @@
+#gcode_file_select {
+    width: 250px !important;
+    min-width: 250px !important;
+    max-width: 100%; /* Prevents weird shrinking */
+}
+
+#scan_gcode_button {
+    margin-left: 10px;
+}
+.message-text {
+    font-weight: bold;
+    font-size: 20px; /* adjustable for viewer liking */
+
+}
+
+.scan-settings-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Force everything to align correctly */
+#gcode_controls {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}

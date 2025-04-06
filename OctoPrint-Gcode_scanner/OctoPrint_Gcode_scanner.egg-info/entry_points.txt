@@ -1,2 +1,0 @@
-[octoprint.plugin]
-gcode_scanner = octoprint_gcode_scanner
