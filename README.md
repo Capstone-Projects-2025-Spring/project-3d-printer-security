@@ -77,13 +77,24 @@ https://asmedigitalcollection.asme.org/computingengineering/article-abstract/21/
 ## Deployment Instructions
 ### Mac  
   1) Download Rasberry Pi OS to your Mac
-  2) Run the program
+  2) Run the program by opening the disk image and dragging
   3) Select "Choose OS"
   4) Navigate to the "other specific OS option", then 3D printing, OctoPi is one of the first results
   5) Select the preferred release and storage device (SD card).
-  6) Insert in the Raspberry Pi, and after launching, set up an Admin account
+  6) Insert the SD card in the Raspberry Pi, and after launching, set up an Admin account
   7) Go to the plugins menu within settings.
   8) Install the scanner plugin from the repository link, https://github.com/Capstone-Projects-2025-Spring/project-3d-printer-security.git 
+
+### Linux & Windows 
+  1) Download Rasberry Pi OS to your computer
+  2) Run the program by opening the installer and opening upon completion
+  3) Select "Choose OS"
+  4) Navigate to the "other specific OS option", then 3D printing, OctoPi is one of the first results
+  5) Select the preferred release and storage device (SD card).
+  6) Insert the SD card in the Raspberry Pi, and after launching, set up an Admin account
+  7) Go to the plugins menu within settings.
+  8) Install the scanner plugin from the repository link, https://github.com/Capstone-Projects-2025-Spring/project-3d-printer-security.git 
+
 
 You then connect the Pi to the 3D printer via a hardline connection, then on your Mac connect via the IP address of the Raspberry Pi or by octopi.local in your preferred web browser, and you are now able to scan and print
 
