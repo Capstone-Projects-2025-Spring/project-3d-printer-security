@@ -5,8 +5,6 @@ import logging
 # Added for refreshing the filesystem
 from octoprint.events import Events
 
-
-
 class GcodeScannerPlugin(
     octoprint.plugin.StartupPlugin,         # Added for startup actions
     octoprint.plugin.TemplatePlugin,        # Added for template rendering

@@ -1,37 +1,93 @@
+[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=17857619)
 <div align="center">
 
-# Project Name
+# 3D Printer Security
 [![Report Issue on Jira](https://img.shields.io/badge/Report%20Issues-Jira-0052CC?style=flat&logo=jira-software)](https://temple-cis-projects-in-cs.atlassian.net/jira/software/c/projects/DT/issues)
 [![Deploy Docs](https://github.com/ApplebaumIan/tu-cis-4398-docs-template/actions/workflows/deploy.yml/badge.svg)](https://github.com/ApplebaumIan/tu-cis-4398-docs-template/actions/workflows/deploy.yml)
 [![Documentation Website Link](https://img.shields.io/badge/-Documentation%20Website-brightgreen)](https://applebaumian.github.io/tu-cis-4398-docs-template/)
 
-
 </div>
 
+## Authors
 
-## Keywords
+Ellie Fiera, Rafael Rodriguez, Sami Jafri, Sergiy Pliss, Shafiq Rahman, and Christopher Christmas.
 
-Section #, as well as any words that quickly give your peers insights into the application like programming language, development platform, type of application, etc.
+## Release Date
+
+01-27-25
+Verion 1.0.0
 
 ## Project Abstract
 
-This document proposes a novel application of a text message (SMS or Email) read-out and hands-free call interacted between an Android Smartphone and an infotainment platform (headunit) in a car environment. When a phone receives an SMS or Email, the text message is transferred from the phone to the headunit through a Bluetooth connection. On the headunit, user can control which and when the received SMS or E-mail to be read out through the in-vehicle audio system. The user may press one button on the headunit to activate the hands-free feature to call back the SMS sender.
+3D Printer G-CODE Validation and Security Application
 
-## High Level Requirement
+The increasing accessibility of 3D printing has revolutionized manufacturing of prototyping or re-producing a part virtually anywhere.
+However, with the widespread use of printing 3D parts, there is a growing risk of maliciously altered or error-prone G-CODE files
+that could damage the equipment, result in injury, or fire.
 
-Describe the requirements – i.e., what the product does and how it does it from a user point of view – at a high level.
+This project aims to develop a solution to mitigate these problems by:
+- Scan G-CODE files for potential threats or errors.
+- Ensuring a safer and more reliable 3D printing experience.
+- Further Scan G-CODE of files to identify issues such as out-of-bound commands.
+- Incorrect temperature settings and other user errors.
+
+After scanning a g-code file, an alert with pass will allow the client to take action to halt printing depending on the scan result.
+If the scan is approved, then it can be printed successfully.
+
+This project’s goals include:
+- Enhancing 3D printer safety by mitigating the risks of hardware damage by stopping malicious code from running on the 3D printer.
+- Streamlining the printing process and increase productivity and prevent downtime.
+- Providing a user-friendly interface to scan and print.
+  This application has the potential to be a vital tool for 3D printing enthusiasts and professionals, ensuring higher print reliability, prevent downtime, and safer operation.
+
+## High-Level Requirement
+
+The application will provide a standard distributable plugin for OctoPrint. It will be available as a feature tab within OctoPrint and will be used after CURA or PRUSA has completed slicing a file into G-code.
+
+The G-code file can either be:
+- Sent to OctoPrint over the network, or
+- Accessed by OctoPrint via network storage.
+
+The client will be presented with a dropdown file selection interface to choose a G-code file for scanning. The scanner will analyze the file and return a **Pass** or **Warnings** status before printing.
 
 ## Conceptual Design
 
-Describe the initial design concept: Hardware/software architecture, programming language, operating system, etc.
+The team will develop the application as a plugin for OctoPrint.
+OctoPrint can run on the network to receive a print job as well as provide web access to scan the file before printing.
+The designed application functionality includes scanning for incorrect temperature ranges out of bound commands,
+malicious commands to disable limit switches, and including to prevent malicious code from colliding the print head into the part. The job of the software will be to stop the print job from being executed on the printer.
 
-## Background
+## Frontend Functional Prototype
 
-The background will contain a more detailed description of the product and a comparison to existing similar projects/products. A literature search should be conducted and the results listed. Proper citation of sources is required. If there are similar open-source products, you should state whether existing source will be used and to what extent. If there are similar closed-source/proprietary products, you should state how the proposed product will be similar and different.
+[Click here to view a functional prototype of the plugin UI.](https://www.figma.com/proto/pC3qnX4DrUOzfLVmQeg4gn/3D-Printer-Security-Prototype?node-id=3334-3397&p=f&t=CZnjBvmk7yK67zjy-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1)
 
-## Required Resources
+## Background Summary
 
-Discuss what you need to develop this project. This includes background information you will need to acquire, hardware resources, and software resources. If these are not part of the standard Computer Science Department lab resources, these must be identified early and discussed with the instructor.
+In government and military computer usage policies, USB drives for storage are highly regulated.
+This makes using USB drive scanning before printing makes it impracticable.
+Therefore, all agencies under this umbrella use secure networks for printing and communication. To ensure compatibility and functionality, the G-code scanning application will have network capability.
+
+- Seamless integration with all networked devices where 3D printing security is in high demand.
+- Future scalability to handle multiple files and print multiple jobs sent to more than one printer.
+- Octoprint provides documentation for creating plugins for developers to enhance or upgrade features. 
+
+Other information on addressing 3D printing security.   
+https://asmedigitalcollection.asme.org/computingengineering/article-abstract/21/4/041007/1089710/A-Blockchain-Based-G-Code-Protection-Approach-for?redirectedFrom=fulltext
+
+## Deployment Instructions
+Mac  - Download Rasberry Pi OS to your Mac, run the program, select "Choose OS", navigate to the "other specific OS option", then 3D printing, OctoPi is one of the first results, and select the preferred release and storage device (SD card). Insert in the Raspberry Pi, and after launching, set up an Admin account and go to the plugins menu within settings. From here you can install the scanner plugin from the repository link, https://github.com/Capstone-Projects-2025-Spring/project-3d-printer-security.git 
+
+You then connect the Pi to the 3D printer via a hardline connection, then on your Mac connect via the IP address of the Raspberry Pi or by octopi.local in your preferred web browser, and are now able to scan and print
+
+## Recommended Resources
+
+The following resources will aid in the plugin development. 
+- OctoPrint Plugin Documentation
+- Raspberry PI 4
+- 3d Printer 
+- Remote VPN access to the computer for working remotely to test code (Optional).
+- SD Card
+- A camera pointed at the 3d Printer for remote testing (Optional).
 
 ## Collaborators
 
@@ -51,7 +107,50 @@ Discuss what you need to develop this project. This includes background informat
             <br />
             <sub><b>Null</b></sub>
         </a>
-    </td></tr>
+    </td>
+    <td align="center">
+        <a href="https://github.com/shafiq9018">
+            <img src="https://avatars.githubusercontent.com/shafiq9018" width="100;" alt="shafiq9018"/>
+            <br />
+            <sub><b>Shafiq Rahman</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/efiera">
+            <img src="https://avatars.githubusercontent.com/efiera" width="100;" alt="efiera"/>
+            <br />
+            <sub><b>Ellie Fiera</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/RRodriguez26">
+            <img src="https://avatars.githubusercontent.com/RRodriguez26" width="100;" alt="RRodriguez26"/>
+            <br />
+            <sub><b>Rafael Perez</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Stapletonchris">
+            <img src="https://avatars.githubusercontent.com/Stapletonchris" width="100;" alt="Stapletonchris"/>
+            <br />
+            <sub><b>Christopher Luckie Christmas</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/sh-jafri">
+            <img src="https://avatars.githubusercontent.com/sh-jafri" width="100;" alt="sh-jafri"/>
+            <br />
+            <sub><b>Sami Jafri</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/sergiyPliss">
+            <img src="https://avatars.githubusercontent.com/sergiyPliss" width="100;" alt="sergiyPliss"/>
+            <br />
+            <sub><b>Sergiy Pliss</b></sub>
+        </a>
+    </td>
+</tr>
 </table>
 
 [//]: # ( readme: collaborators -end )

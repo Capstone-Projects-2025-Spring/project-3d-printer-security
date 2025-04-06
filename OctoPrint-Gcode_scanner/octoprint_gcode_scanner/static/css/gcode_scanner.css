@@ -7,6 +7,7 @@
 #scan_gcode_button {
     margin-left: 10px;
 }
+
 .message-text {
     font-weight: bold;
     font-size: 20px; /* adjustable for viewer liking */
@@ -25,3 +26,4 @@
     align-items: center !important;
     gap: 10px !important;
 }
+
