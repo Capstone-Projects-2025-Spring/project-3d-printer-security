@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: OctoPrint-Gcode-scanner
+Version: 1.0.0
+Summary: Create an excellent plugin and get an excellent grade.
+Home-page: https://github.com/shafiq9018/OctoPrint-Gcode_scanner
+Author: Shafiq Rahman
+Author-email: shafiq@temple.edu
+License: AGPLv3
+Requires-Python: >=3,<4

@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+OctoPrint_Gcode_scanner.egg-info/PKG-INFO
+OctoPrint_Gcode_scanner.egg-info/SOURCES.txt
+OctoPrint_Gcode_scanner.egg-info/dependency_links.txt
+OctoPrint_Gcode_scanner.egg-info/entry_points.txt
+OctoPrint_Gcode_scanner.egg-info/not-zip-safe
+OctoPrint_Gcode_scanner.egg-info/requires.txt
+OctoPrint_Gcode_scanner.egg-info/top_level.txt
+octoprint_gcode_scanner/__init__.py
+octoprint_gcode_scanner/static/css/gcode_scanner.css
+octoprint_gcode_scanner/static/js/gcode_scanner.js
+octoprint_gcode_scanner/static/less/gcode_scanner.less
+octoprint_gcode_scanner/templates/README.txt
+octoprint_gcode_scanner/templates/gcode_scanner_tab.jinja2
