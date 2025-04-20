@@ -2,6 +2,7 @@
 <div align="center">
 
 # 3D Printer Security
+
 [![Report Issue on Jira](https://img.shields.io/badge/Report%20Issues-Jira-0052CC?style=flat&logo=jira-software)](https://temple-cis-projects-in-cs.atlassian.net/jira/software/c/projects/DT/issues)
 [![Deploy Docs](https://github.com/ApplebaumIan/tu-cis-4398-docs-template/actions/workflows/deploy.yml/badge.svg)](https://github.com/ApplebaumIan/tu-cis-4398-docs-template/actions/workflows/deploy.yml)
 [![Documentation Website Link](https://img.shields.io/badge/-Documentation%20Website-brightgreen)](https://applebaumian.github.io/tu-cis-4398-docs-template/)
@@ -26,6 +27,7 @@ However, with the widespread use of printing 3D parts, there is a growing risk o
 that could damage the equipment, result in injury, or fire.
 
 This project aims to develop a solution to mitigate these problems by:
+
 - Scan G-CODE files for potential threats or errors.
 - Ensuring a safer and more reliable 3D printing experience.
 - Further Scan G-CODE of files to identify issues such as out-of-bound commands.
@@ -35,6 +37,7 @@ After scanning a g-code file, an alert with pass will allow the client to take a
 If the scan is approved, then it can be printed successfully.
 
 This project’s goals include:
+
 - Enhancing 3D printer safety by mitigating the risks of hardware damage by stopping malicious code from running on the 3D printer.
 - Streamlining the printing process and increase productivity and prevent downtime.
 - Providing a user-friendly interface to scan and print.
@@ -45,6 +48,7 @@ This project’s goals include:
 The application will provide a standard distributable plugin for OctoPrint. It will be available as a feature tab within OctoPrint and will be used after CURA or PRUSA has completed slicing a file into G-code.
 
 The G-code file can either be:
+
 - Sent to OctoPrint over the network, or
 - Accessed by OctoPrint via network storage.
 
@@ -57,10 +61,6 @@ OctoPrint can run on the network to receive a print job as well as provide web a
 The designed application functionality includes scanning for incorrect temperature ranges out of bound commands,
 malicious commands to disable limit switches, and including to prevent malicious code from colliding the print head into the part. The job of the software will be to stop the print job from being executed on the printer.
 
-## Frontend Functional Prototype
-
-[Click here to view a functional prototype of the plugin UI.](https://www.figma.com/proto/pC3qnX4DrUOzfLVmQeg4gn/3D-Printer-Security-Prototype?node-id=3334-3397&p=f&t=CZnjBvmk7yK67zjy-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1)
-
 ## Background Summary
 
 In government and military computer usage policies, USB drives for storage are highly regulated.
@@ -69,22 +69,28 @@ Therefore, all agencies under this umbrella use secure networks for printing and
 
 - Seamless integration with all networked devices where 3D printing security is in high demand.
 - Future scalability to handle multiple files and print multiple jobs sent to more than one printer.
-- Octoprint provides documentation for creating plugins for developers to enhance or upgrade features. 
+- Octoprint provides documentation for creating plugins for developers to enhance or upgrade features.
 
-Other information on addressing 3D printing security.   
-https://asmedigitalcollection.asme.org/computingengineering/article-abstract/21/4/041007/1089710/A-Blockchain-Based-G-Code-Protection-Approach-for?redirectedFrom=fulltext
+Other information on addressing 3D printing security.
+<https://asmedigitalcollection.asme.org/computingengineering/article-abstract/21/4/041007/1089710/A-Blockchain-Based-G-Code-Protection-Approach-for?redirectedFrom=fulltext>
 
-## Deployment Instructions
-Mac  - Download Rasberry Pi OS to your Mac, run the program, select "Choose OS", navigate to the "other specific OS option", then 3D printing, OctoPi is one of the first results, and select the preferred release and storage device (SD card). Insert in the Raspberry Pi, and after launching, set up an Admin account and go to the plugins menu within settings. From here you can install the scanner plugin from the repository link, https://github.com/Capstone-Projects-2025-Spring/project-3d-printer-security.git 
+## Instruction of Usage
+
+To use this gcode scanner, you must [download Octoprint](https://octoprint.org/download/). Once you have Octoprint downloaded, you should use [this instruction via the URL and the Plugin Manager](https://plugins.octoprint.org/help/installation/) to successfully download this gcode scanner.
+
+## Instructions for development
+
+Mac  - Download Rasberry Pi OS to your Mac, run the program, select "Choose OS", navigate to the "other specific OS option", then 3D printing, OctoPi is one of the first results, and select the preferred release and storage device (SD card). Insert in the Raspberry Pi, and after launching, set up an Admin account and go to the plugins menu within settings. From here you can install the scanner plugin from the repository link, <https://github.com/Capstone-Projects-2025-Spring/project-3d-printer-security.git>
 
 You then connect the Pi to the 3D printer via a hardline connection, then on your Mac connect via the IP address of the Raspberry Pi or by octopi.local in your preferred web browser, and are now able to scan and print
 
 ## Recommended Resources
 
-The following resources will aid in the plugin development. 
+The following resources will aid in the plugin development.
+
 - OctoPrint Plugin Documentation
 - Raspberry PI 4
-- 3d Printer 
+- 3d Printer
 - Remote VPN access to the computer for working remotely to test code (Optional).
 - SD Card
 - A camera pointed at the 3d Printer for remote testing (Optional).
