@@ -1,0 +1,19 @@
+services:
+  octoprint:
+    image: octoprint/octoprint
+    
+    ports:
+      - 80:80
+    volumes:
+    - octoprint:/octoprint
+    - ./OctoPrint-Gcode_scanner:/octoprint/plugins/OctoPrint-Gcode_scanner
+volumes:
+  octoprint:
+
+# When going about installing the plugin, first:
+
+# Type `docker compose exec octoprint bash` in the other terminal terminal
+# You will then reach in the octoprint directory you then type:
+# cd ..
+# Then to install it you type:
+# pip install octoprint/plugins/OctoPrint-Gcode_scanner/

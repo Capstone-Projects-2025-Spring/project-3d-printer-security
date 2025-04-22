@@ -61,10 +61,6 @@ OctoPrint can run on the network to receive a print job as well as provide web a
 The designed application functionality includes scanning for incorrect temperature ranges out of bound commands,
 malicious commands to disable limit switches, and including to prevent malicious code from colliding the print head into the part. The job of the software will be to stop the print job from being executed on the printer.
 
-## Frontend Functional Prototype
-
-[Click here to view a functional prototype of the plugin UI.](https://www.figma.com/proto/pC3qnX4DrUOzfLVmQeg4gn/3D-Printer-Security-Prototype?node-id=3334-3397&p=f&t=CZnjBvmk7yK67zjy-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1)
-
 ## Background Summary
 
 In government and military computer usage policies, USB drives for storage are highly regulated.
@@ -78,7 +74,11 @@ Therefore, all agencies under this umbrella use secure networks for printing and
 Other information on addressing 3D printing security.
 <https://asmedigitalcollection.asme.org/computingengineering/article-abstract/21/4/041007/1089710/A-Blockchain-Based-G-Code-Protection-Approach-for?redirectedFrom=fulltext>
 
-## Deployment Instructions
+## Instruction of Usage
+
+To use this gcode scanner, you must [download Octoprint](https://octoprint.org/download/). Once you have Octoprint downloaded, you should use [this instruction via the URL and the Plugin Manager](https://plugins.octoprint.org/help/installation/) to successfully download this gcode scanner.
+
+## Instructions for development
 
   1) Download Rasberry Pi OS to your computer
   2) Run the program by opening the installer and opening upon completion (disk image and dragging for mac)
