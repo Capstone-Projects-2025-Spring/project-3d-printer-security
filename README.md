@@ -130,7 +130,7 @@ The following resources will aid in the plugin development.
     </td>
     <td align="center">
         <a href="https://github.com/RRodriguez26">
-            <img src="https://avatars.githubusercontent.com/RRodriguez26" width="100;" alt="RRodriguez26"/>
+            <img src="https://github.com/user-attachments/assets/9166b14d-7237-4054-ac9a-8ca3a391da9d" width="100;" alt="RRodriguez26"/>
             <br />
             <sub><b>Rafael Perez</b></sub>
         </a>
