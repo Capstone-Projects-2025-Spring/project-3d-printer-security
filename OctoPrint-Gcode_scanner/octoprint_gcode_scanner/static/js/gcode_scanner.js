@@ -95,7 +95,7 @@ $(function () {
         };
 
         // This function is called when the plugin is loaded
-        // This function is used to modify the list above. If the user unchecks and checks different 
+        // This function is used to modify the list above. If the user unchecks and checks different
         // checkboxes, the list will be updated. And the scan will be based off the updated list.
         // Shafiq.
         self.updateMaliciousCommands = function () {
@@ -240,7 +240,7 @@ $(function () {
         setTimeout(self.populateDropdown, 2000); // Give time for OctoPrint to load files
 
         // Populate dropdown on page load
-        self.populateDropdown();  // This should run once on load  
+        self.populateDropdown();  // This should run once on load
 
         setTimeout(() => {
             self.populateDropdown();   // fills the dropdown callnig twice to be safe.
@@ -284,7 +284,7 @@ $(function () {
         // Source: https://community.octoprint.org/t/uploading-file-to-octopi-through-the-api-using-javascript/3938
         self.scanGcode = function (filename) {
             // var selectedFile = $("#gcode_file_select").val();
-            var selectedFile = filename || $("#gcode_file_select").val(); // Hanldle both cases -Shafiq.
+            var selectedFile = filename || $("#gcode_file_select").val(); // Handle both cases -Shafiq.
 
             // Fade out old results smoothly before scanning new files and after selecting a file.
             $("#scan_results").fadeOut(300, function () { });
@@ -344,7 +344,7 @@ $(function () {
             });
         };
 
-        // // ELLIE: CRC Checking before printing. 
+        // // ELLIE: CRC Checking before printing.
         // // This socket listener is used to detect when a file is uploaded to OctoPrint
         // // and then trigger the auto-scan function.
         OctoPrint.socket.onMessage("*", function (message) {
@@ -385,7 +385,7 @@ $(function () {
         // });
 
         // 📂 Intercept file selection for printing
-        // ELLIE: CRC Checking before printing. 
+        // ELLIE: CRC Checking before printing.
         // This socket listener is used to detect when a file is selected for printing
         // Intercept file selection for printing
         // https://docs.octoprint.org/en/maintenance/features/accesscontrol.html
@@ -432,7 +432,7 @@ $(function () {
                 }
             }
         });
-        
+
 
         self.processGcode = function (gcodeContent, selectedFile) {
             console.log("Scanning G-code content..." + selectedFile + " for malicious commands.");
@@ -563,18 +563,33 @@ $(function () {
         // Scan Gcode event button
         // $("#scan_gcode_button").off("click").on("click", self.scanGcode); <-- This is the old code. I will keep it here for now.
         $("#rescan_all_button").off("click").on("click", function () {
-            // Mockup for the rescan all button
+
             console.log("Scan rescan_all_button clicked");
-            alert(`🎆 COMING SOON 🎆\n\n💥 MAKE G-CODE GREAT AGAIN 💥`);
+             const fileList = self.filesViewModel.allItems();
+             fileList.forEach(file => {
+                 self.scanGcode(file.name);
+            });
+
 
         });
 
                 // Scan Gcode event button
         // $("#scan_gcode_button").off("click").on("click", self.scanGcode); <-- This is the old code. I will keep it here for now.
         $("#override_safe_button").off("click").on("click", function () {
-            // Mockup for the override safe button
+
             console.log("Scan override_safe_button clicked");
-            alert(`☢️ COMING SOON ☢️\n\n🔥  If it aint broke don't print it 🔥`);
+
+
+              $("#passed_logs div").filter(function () {
+                    return $(this).text().includes($("#gcode_file_select").val());
+                }).remove();
+              $("#failed_logs div").filter(function () {
+                    return $(this).text().includes($("#gcode_file_select").val());
+                }).remove();
+                self.addPassedScans(new Date().toLocaleString(),$("#gcode_file_select").val(),
+                    'and/or → CRC created @ upload. -overridden-');
+              //Removes overridden file from both lists and re-adds it to passed.
+
         });
 
         // Clear Passed Logs Button (Green)
@@ -627,9 +642,9 @@ $(function () {
     }
 
     // Register the plugin with OctoPrint's view model system
-    // filesViewModel is OctoPrint’s built-in Knockout.js ViewModel 
-    // that manages file uploads, storage, and selection in the 
-    // OctoPrint file manager. It allows plugins to interact with 
+    // filesViewModel is OctoPrint’s built-in Knockout.js ViewModel
+    // that manages file uploads, storage, and selection in the
+    // OctoPrint file manager. It allows plugins to interact with
     // the list of G-code files stored in OctoPrint.
     OCTOPRINT_VIEWMODELS.push({
         construct: GcodeScannerViewModel,
