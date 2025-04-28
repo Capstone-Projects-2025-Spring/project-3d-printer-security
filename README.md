@@ -80,9 +80,16 @@ To use this gcode scanner, you must [download Octoprint](https://octoprint.org/d
 
 ## Instructions for development
 
-Mac  - Download Rasberry Pi OS to your Mac, run the program, select "Choose OS", navigate to the "other specific OS option", then 3D printing, OctoPi is one of the first results, and select the preferred release and storage device (SD card). Insert in the Raspberry Pi, and after launching, set up an Admin account and go to the plugins menu within settings. From here you can install the scanner plugin from the repository link, <https://github.com/Capstone-Projects-2025-Spring/project-3d-printer-security.git>
+  1) Download Rasberry Pi OS to your computer
+  2) Run the program by opening the installer and opening upon completion (disk image and dragging for mac)
+  3) Select "Choose OS"
+  4) Navigate to the "other specific OS option", then 3D printing, OctoPi is one of the first results
+  5) Select the preferred release and storage device (SD card).
+  6) Insert the SD card in the Raspberry Pi, and after launching, set up an Admin account
+  7) Go to the plugins menu within settings.
+  8) Install the scanner plugin from the repository link, <https://github.com/Capstone-Projects-2025-Spring/project-3d-printer-security.git>
 
-You then connect the Pi to the 3D printer via a hardline connection, then on your Mac connect via the IP address of the Raspberry Pi or by octopi.local in your preferred web browser, and are now able to scan and print
+You then connect the Pi to the 3D printer via a hardline connection, then on your Mac connect via the IP address of the Raspberry Pi or by octopi.local in your preferred web browser, and you are now able to scan and print
 
 ## Recommended Resources
 
@@ -94,6 +101,19 @@ The following resources will aid in the plugin development.
 - Remote VPN access to the computer for working remotely to test code (Optional).
 - SD Card
 - A camera pointed at the 3d Printer for remote testing (Optional).
+
+## Features
+- Allow users to check and uncheck default instructions it wants to detect
+- Automatically scan gcode when submitting files in octoprint
+- Allow users to submit other instructions
+- Allow users to disable printing
+- Allow users to enable printing for a certain gcode
+- Pick any malicious files to take action.
+
+## Bugs
+- Web page must be refreshed to update list of malicious files
+
+
 
 ## Collaborators
 
